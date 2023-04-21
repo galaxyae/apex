@@ -127,6 +127,14 @@ GERMANY""".upper(),
             'status':'EK0730 - Dispatched',
             'color':'green'
         },
+        {
+            'time':'10:50',
+            'date':'21-04-2023 10:50',
+            'airport':'Arrived at Dubai International Airport [DXB]'.upper(),
+            'is_error': False,
+            'status':'Under Customs Review - Processing',
+            'color':'green'
+        },
         #5h 10m
         # {
         #     'time':'22:40',
