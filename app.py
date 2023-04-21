@@ -7,7 +7,7 @@ import tracking as track
 
 app = Flask(__name__)
 
-host = "http://192.168.227.194:5000"
+host = "https://apexcapitallogistics.com"
 
 @app.route('/')
 def index():
