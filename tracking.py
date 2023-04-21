@@ -60,7 +60,7 @@ def uganda_new_mexico():
     sender = {
         'name':'New Crest Mining Limited',
         'address':"""
-                    PLOT 1, KATALINA CRESCENT LOWER \n
+                    PLOT 7, LOURDEL ROAD, 4th FLOOR - AHA TOUR \n
                     NAGURU - UGANDA
                 """,
         'contact':'info@newcrestminingltd.com'
@@ -96,11 +96,9 @@ def uganda_new_mexico():
     ]
 
     reciever = {
-        'name':'JURI STREBEL KAISERLINOE',
-        'address':"""1
-56766, ULMEN
-GERMANY
-Juri.strebel@gmail.com""".upper(),
+        'name':'JURI STREBEL',
+        'address':"""KAISERLINOE 156766, ULMEN
+GERMANY""".upper(),
         'contact':'Juri.strebel@gmail.com , +491781401260'
     }
     # Harry Reid International Airport (LAS)
@@ -113,14 +111,14 @@ Juri.strebel@gmail.com""".upper(),
             'status':'Processing',
             'color':'green'
         },
-        # {
-        #     'time':'16:25',
-        #     'date':'30-12-2021 16:25',
-        #     'airport':'Entebbe, Entebbe International Airport [EBB]'.upper(),
-        #     'is_error': False,
-        #     'status':'🛫 EK 0730 - Departure',
-        #     'color':'green'
-        # },
+        {
+            'time':'13:00',
+            'date':'21-04-2023 13:00',
+            'airport':'Entebbe, Entebbe International Airport [EBB]'.upper(),
+            'is_error': False,
+            'status':'EK 0730 - ETD 21-04-2023 04:25 PM | ETA 21-04-2023 10:50 PM',
+            'color':'green'
+        },
         #5h 10m
         # {
         #     'time':'22:40',
