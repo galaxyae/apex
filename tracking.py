@@ -19,13 +19,9 @@ def uganda_new_mexico():
             'code': 'AE',
             'airport': 'DXB'
         },{
-            'country': 'San Francisco',
-            'code': 'US',
-            'airport': 'SFO'
-        },{
-            'country': 'Arizona City',
-            'code': 'US',
-            'airport': 'PHX'
+            'country': 'Frankfurt am Main',
+            'code': 'DE',
+            'airport': 'FRA'
         }]
 
     map = []
@@ -62,28 +58,28 @@ def uganda_new_mexico():
             )
     print(lines)
     sender = {
-        'name':'ELIJAH',
+        'name':'New Crest Mining Limited',
         'address':"""
                     PLOT 1, KATALINA CRESCENT LOWER \n
                     NAGURU - UGANDA
                 """,
-        'contact':'info@newcrest.com'
+        'contact':'info@newcrestminingltd.com'
     }
 
 
     product = {
         'name':'Precious Minerals',
         'content':[
-            {'item': '2 Boxe(s) of GOLD AU BARS [100 KGs]'},
+            {'item': '1 Boxe(s) of GOLD AU BARS [1 KGs]'},
         ]
     }
 
     transit = [
         {
             'current':'Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB]'.upper(),#' - Dubai International Airport [DXB]',
-            'departure':'Emirates, EK 0730 → Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB] 30-12-2021 22:40 [ Duration 5h15m ]',
-            'arrival':'Emirates, EK 0730 → ETA Dubai, Dubai International Airport [DXB] 30-12-2021 22:40',
-            'comment': 'The shipment queried and discharged, shipper notification forwarded for follow up'
+            'departure':'Emirates, EK 0730 → Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB] 21-04-2023 04:25 [ Duration 5h15m ]',
+            'arrival':'Emirates, EK 0730 → ETA Dubai, Dubai International Airport [DXB] 21-04-2023 10:50 PM',
+            'comment': 'Processing'
         },
         # {
         #     'current':'Dubai, Dubai International Airport [DXB] - San Francisco International Airport [SFO]'.upper(),#' - Dubai International Airport [DXB]',
@@ -100,74 +96,85 @@ def uganda_new_mexico():
     ]
 
     reciever = {
-        'name':'Client Name',
-        'address':"""Client Address""".upper(),
-        'contact':'Client Contact'
+        'name':'JURI STREBEL KAISERLINOE',
+        'address':"""1
+56766, ULMEN
+GERMANY
+Juri.strebel@gmail.com""".upper(),
+        'contact':'Juri.strebel@gmail.com , +491781401260'
     }
     # Harry Reid International Airport (LAS)
     flight_progress = [
         {
-            'time':'16:25',
-            'date':'30-12-2021 16:25',
-            'airport':'Entebbe, Entebbe International Airport [EBB]'.upper(),
+            'time':'12:00',
+            'date':'21-04-2023 12:00',
+            'airport':'Arrived at Apex Logistics Sorting Facility KAMPALA - UGANDA'.upper(),
             'is_error': False,
-            'status':'🛫 EK 0730 - Departure',
+            'status':'Processing',
             'color':'green'
         },
+        # {
+        #     'time':'16:25',
+        #     'date':'30-12-2021 16:25',
+        #     'airport':'Entebbe, Entebbe International Airport [EBB]'.upper(),
+        #     'is_error': False,
+        #     'status':'🛫 EK 0730 - Departure',
+        #     'color':'green'
+        # },
         #5h 10m
-        {
-            'time':'22:40',
-            'date':'30-12-2021 22:40',
-            'airport':'Dubai, Dubai International Airport [DXB]'.upper(),
-            'is_error': False,
-            'status':'🛬 EK 0730 - Arrival',
-            'color':'green'
-        },
-        {
-            'time':'10:00',
-            'date':'31-12-2021 10:00',
-            'airport':'Error occurred processing shipment',
-            'is_error': True,
-            'status':'Action Required',
-            'color':'orange'
-        },
-        {
-            'time':'08:45',
-            'date':'02-01-2022 08:45',
-            'airport':'Dubai, Dubai International Airport [DXB]'.upper(),
-            'is_error': False,
-            'status':'🛫 EK 0225 - Departure',
-            'color':'default'
-        },
-        #1h 10m
-        {
-            'time':'12:45',
-            'date':'02-01-2022 12:45',
-            'airport':'San Francisco International Airport [SFO]'.upper(),
-            'is_error': False,
-            'status':'🛬 EK 0225 - Arrival',
-            'color':'default'
-        },
-        {
-            'time':'23:00',
-            'date':'03-01-2022 23:00',
-            'airport':'San Francisco International Airport [SFO]'.upper(),
-            'is_error': False,
-            'status':'🚚 Departure → [Ground Shipping]',
-            'color':'default'
-        },
-        {
-            'time':'10:00',
-            'date':'05-01-2022 10:00',
-            'airport':'Phoenix Sky Harbor International Airport [PHX]'.upper(),
-            'is_error': False,
-            'status':'🚚 Arrival → [Ground Shipping]',
-            'color':'default'
-        },
+        # {
+        #     'time':'22:40',
+        #     'date':'30-12-2021 22:40',
+        #     'airport':'Dubai, Dubai International Airport [DXB]'.upper(),
+        #     'is_error': False,
+        #     'status':'🛬 EK 0730 - Arrival',
+        #     'color':'green'
+        # },
+        # {
+        #     'time':'10:00',
+        #     'date':'31-12-2021 10:00',
+        #     'airport':'Error occurred processing shipment',
+        #     'is_error': True,
+        #     'status':'Action Required',
+        #     'color':'orange'
+        # },
+        # {
+        #     'time':'08:45',
+        #     'date':'02-01-2022 08:45',
+        #     'airport':'Dubai, Dubai International Airport [DXB]'.upper(),
+        #     'is_error': False,
+        #     'status':'🛫 EK 0225 - Departure',
+        #     'color':'default'
+        # },
+        # #1h 10m
+        # {
+        #     'time':'12:45',
+        #     'date':'02-01-2022 12:45',
+        #     'airport':'San Francisco International Airport [SFO]'.upper(),
+        #     'is_error': False,
+        #     'status':'🛬 EK 0225 - Arrival',
+        #     'color':'default'
+        # },
+        # {
+        #     'time':'23:00',
+        #     'date':'03-01-2022 23:00',
+        #     'airport':'San Francisco International Airport [SFO]'.upper(),
+        #     'is_error': False,
+        #     'status':'🚚 Departure → [Ground Shipping]',
+        #     'color':'default'
+        # },
+        # {
+        #     'time':'10:00',
+        #     'date':'05-01-2022 10:00',
+        #     'airport':'Phoenix Sky Harbor International Airport [PHX]'.upper(),
+        #     'is_error': False,
+        #     'status':'🚚 Arrival → [Ground Shipping]',
+        #     'color':'default'
+        # },
     ]
 
     has_shipped = True
-    has_arrived = True
+    has_arrived = False
 
 
     has_arrived_message = [
@@ -198,11 +205,11 @@ def uganda_new_mexico():
     'error_message':'Please review your consignment within 24hrs before 02-DEC-2022 08:00 to enure proper shipping.'
     }
 
-    shipment_error = True
+    shipment_error = False
 
     arrival_time = "Estimated time of arrival → 05 DEC 2022 [Emirates]"
 
     # check
     increment = 100 / len(checkpoints)
-    progress = .85
+    progress = .1
     return render_template('track.html', item="", ui="", shipment=product, has_arrived=has_arrived, has_arrived_message=has_arrived_message, sender=sender, has_shipped=has_shipped, shipping_message=shipping_message, product=transit, receiver=reciever, amount=len(transit), map = unique, lines = lines, source = locations[0]['country'].title(), checkpoints=checkpoints, checkpoints_length=len(checkpoints), increment=increment, progress=progress, error=error, flight_progress=flight_progress, arrival_time=arrival_time, shipment_error=shipment_error)
