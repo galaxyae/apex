@@ -108,7 +108,7 @@ GERMANY""".upper(),
             'date':'21-04-2023 12:00',
             'airport':'Arrived at Apex Logistics Sorting Facility KAMPALA - UGANDA'.upper(),
             'is_error': False,
-            'status':'Processing',
+            'status':'Processed',
             'color':'green'
         },
         {
