@@ -60,7 +60,7 @@ def uganda_new_mexico():
     sender = {
         'name':'New Crest Mining Limited',
         'address':"""
-                    PLOT 7, LOURDEL ROAD, 4th FLOOR - AHA TOUR \n
+                    PLOT 7, LOURDEL ROAD
                     NAGURU - UGANDA
                 """,
         'contact':'info@newcrestminingltd.com'
