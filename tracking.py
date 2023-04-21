@@ -79,8 +79,8 @@ def uganda_new_mexico():
             'current':'Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB]'.upper(),#' - Dubai International Airport [DXB]',
             'departure':'Emirates, EK 0730 → Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB] 21-04-2023 04:25 [ Duration 5h15m ]',
             'arrival':'Emirates, EK 0730 → ETA Dubai, Dubai International Airport [DXB] 21-04-2023 10:50 PM',
-            'comment': 'Processing'
-        },
+            'comment': 'Processed'
+        },        
         # {
         #     'current':'Dubai, Dubai International Airport [DXB] - San Francisco International Airport [SFO]'.upper(),#' - Dubai International Airport [DXB]',
         #     'departure':'Emirates, EK 0225 → Dubai, Dubai International Airport [DXB] - San Francisco International Airport [SFO] 02-01-2022 08:45 [ Duration 14h15m ]',
@@ -117,6 +117,14 @@ GERMANY""".upper(),
             'airport':'Entebbe, Entebbe International Airport [EBB]'.upper(),
             'is_error': False,
             'status':'EK 0730 - ETD 21-04-2023 04:25 PM | ETA 21-04-2023 10:50 PM',
+            'color':'green'
+        },
+        {
+            'time':'16:25',
+            'date':'21-04-2023 16:25',
+            'airport':'Entebbe, Entebbe International Airport [EBB]'.upper(),
+            'is_error': False,
+            'status':'EK0730 - Departed',
             'color':'green'
         },
         #5h 10m
@@ -209,5 +217,5 @@ GERMANY""".upper(),
 
     # check
     increment = 100 / len(checkpoints)
-    progress = .1
+    progress = .3
     return render_template('track.html', item="", ui="", shipment=product, has_arrived=has_arrived, has_arrived_message=has_arrived_message, sender=sender, has_shipped=has_shipped, shipping_message=shipping_message, product=transit, receiver=reciever, amount=len(transit), map = unique, lines = lines, source = locations[0]['country'].title(), checkpoints=checkpoints, checkpoints_length=len(checkpoints), increment=increment, progress=progress, error=error, flight_progress=flight_progress, arrival_time=arrival_time, shipment_error=shipment_error)
