@@ -133,7 +133,7 @@ GERMANY""".upper(),
             'airport':'Arrived at Dubai International Airport [DXB]'.upper(),
             'is_error': False,
             'status':'Under Customs Review - Processing',
-            'color':'green'
+            'color':'orange'
         },
         #5h 10m
         # {
