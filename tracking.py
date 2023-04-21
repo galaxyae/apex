@@ -70,7 +70,7 @@ def uganda_new_mexico():
     product = {
         'name':'Precious Minerals',
         'content':[
-            {'item': '1 Boxe(s) of GOLD AU BARS [1 KGs]'},
+            {'item': '1 Box(es) of GOLD AU BARS [1 KGs]'},
         ]
     }
 
@@ -80,7 +80,7 @@ def uganda_new_mexico():
             'departure':'Emirates, EK 0730 → Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB] 21-04-2023 04:25 [ Duration 5h15m ]',
             'arrival':'Emirates, EK 0730 → ETA Dubai, Dubai International Airport [DXB] 21-04-2023 10:50 PM',
             'comment': 'Processed'
-        },        
+        },
         # {
         #     'current':'Dubai, Dubai International Airport [DXB] - San Francisco International Airport [SFO]'.upper(),#' - Dubai International Airport [DXB]',
         #     'departure':'Emirates, EK 0225 → Dubai, Dubai International Airport [DXB] - San Francisco International Airport [SFO] 02-01-2022 08:45 [ Duration 14h15m ]',
@@ -124,7 +124,7 @@ GERMANY""".upper(),
             'date':'21-04-2023 16:25',
             'airport':'Entebbe, Entebbe International Airport [EBB]'.upper(),
             'is_error': False,
-            'status':'EK0730 - Departed',
+            'status':'EK0730 - Dispatched',
             'color':'green'
         },
         #5h 10m
