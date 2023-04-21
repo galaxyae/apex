@@ -207,7 +207,7 @@ Juri.strebel@gmail.com""".upper(),
 
     shipment_error = False
 
-    arrival_time = "Estimated time of arrival → 05 DEC 2022 [Emirates]"
+    arrival_time = "Estimated time of arrival → 22 APRIL 2023 [Emirates]"
 
     # check
     increment = 100 / len(checkpoints)
