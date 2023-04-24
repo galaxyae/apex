@@ -293,8 +293,8 @@ def uganda_uae():
     transit = [
         {
             'current':'Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB]'.upper(),#' - Dubai International Airport [DXB]',
-            'departure':'Emirates, EK 0730 → Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB] 18-04-2023 04:25 [ Duration 5h15m ]',
-            'arrival':'Emirates, EK 0730 → ETA Dubai, Dubai International Airport [DXB] 18-04-2023 10:50 PM',
+            'departure':'Emirates, EK 0730 → Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB] 20-04-2023 04:25 [ Duration 5h15m ]',
+            'arrival':'Emirates, EK 0730 → ETA Dubai, Dubai International Airport [DXB] 20-04-2023 10:50 PM',
             'comment': 'Processed'
         },
         # {
@@ -318,7 +318,7 @@ EIB-501A
 Emirates Islamic Bank Building
 RAKEZ Business Zone-FZ
 RAK, UAE.""".upper(),
-        'contact':'-'
+        'contact':'+971 544 208651'
     }
     # Harry Reid International Airport (LAS)
     flight_progress = [
@@ -332,15 +332,15 @@ RAK, UAE.""".upper(),
         # },
         {
             'time':'13:00',
-            'date':'18-04-2023 13:00',
+            'date':'20-04-2023 13:00',
             'airport':'Arrived at Entebbe, Entebbe International Airport [EBB]'.upper(),
             'is_error': False,
-            'status':'EK 0730 - ETD 18-04-2023 04:25 PM | ETA 18-04-2023 10:50 PM',
+            'status':'EK 0730 - ETD 20-04-2023 04:25 PM | ETA 20-04-2023 10:50 PM',
             'color':'green'
         },
         {
             'time':'16:25',
-            'date':'18-04-2023 16:25',
+            'date':'20-04-2023 16:25',
             'airport':'Entebbe, Entebbe International Airport [EBB]'.upper(),
             'is_error': False,
             'status':'EK0730 - Dispatched',
@@ -348,7 +348,7 @@ RAK, UAE.""".upper(),
         },
         {
             'time':'10:50',
-            'date':'18-04-2023 10:50',
+            'date':'20-04-2023 10:50',
             'airport':'Arrived at Dubai International Airport [DXB]'.upper(),
             'is_error': False,
             'status':'Processed',
@@ -440,7 +440,7 @@ RAK, UAE.""".upper(),
 
     shipment_error = False
 
-    arrival_time = "Estimated time of arrival → 18 APRIL 2023 [Emirates]"
+    arrival_time = "Estimated time of arrival → 20 APRIL 2023 [Emirates]"
 
     # check
     increment = 100 / len(checkpoints)
