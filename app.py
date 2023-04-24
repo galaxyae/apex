@@ -69,6 +69,8 @@ def track_id():
                 return render_template('storage.html', id=data, details=items[data])
         elif "TR" in data and data == 'TR344053A77D4':
             return track.uganda_new_mexico()
+        elif "TR" in data and data == 'TR8711DA61099':
+            return track.uganda_uae()
         else:
             return redirect(url_for('index'))
     except Exception as e:
