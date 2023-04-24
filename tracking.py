@@ -322,18 +322,18 @@ RAK, UAE.""".upper(),
     }
     # Harry Reid International Airport (LAS)
     flight_progress = [
-        {
-            'time':'12:00',
-            'date':'21-04-2023 12:00',
-            'airport':'Arrived at Apex Logistics Sorting Facility KAMPALA - UGANDA'.upper(),
-            'is_error': False,
-            'status':'Processed',
-            'color':'green'
-        },
+        # {
+        #     'time':'12:00',
+        #     'date':'21-04-2023 12:00',
+        #     'airport':'Arrived at Apex Logistics Sorting Facility KAMPALA - UGANDA'.upper(),
+        #     'is_error': False,
+        #     'status':'Processed',
+        #     'color':'green'
+        # },
         {
             'time':'13:00',
             'date':'18-04-2023 13:00',
-            'airport':'Entebbe, Entebbe International Airport [EBB]'.upper(),
+            'airport':'Arrived at Entebbe, Entebbe International Airport [EBB]'.upper(),
             'is_error': False,
             'status':'EK 0730 - ETD 18-04-2023 04:25 PM | ETA 18-04-2023 10:50 PM',
             'color':'green'
