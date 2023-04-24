@@ -49,6 +49,16 @@ def custom_tracking():
     page = session.post(url,headers=headers,data=payload).text
     return page
 
+@app.route('/9611941b-5145-4161-87ef-167594a63ff2')
+def custom_tracking_uae():
+    url = f"{host}/9108443e3e2b035c0e167594a63ff2fde9c9cea9"
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    payload = {'tracking':'TR8711DA61099'}
+
+    session = requests.Session()
+    page = session.post(url,headers=headers,data=payload).text
+    return page
+
 @app.route('/privacy')
 def privacy():
     return render_template('privacypolicy.html')
