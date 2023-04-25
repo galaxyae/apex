@@ -141,7 +141,7 @@ GERMANY""".upper(),
             'airport':'Dubai International Airport [DXB]'.upper(),
             'is_error': False,
             'status':'Under Customs Transit Process',
-            'color':'green'
+            'color':'orange'
         },
         #5h 10m
         # {
