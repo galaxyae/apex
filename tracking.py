@@ -132,8 +132,16 @@ GERMANY""".upper(),
             'date':'21-04-2023 10:50',
             'airport':'Arrived at Dubai International Airport [DXB]'.upper(),
             'is_error': False,
-            'status':'Under Customs Review - Processing',
-            'color':'orange'
+            'status':'Reviewed',
+            'color':'green'
+        },
+        {
+            'time':'15:00',
+            'date':'25-04-2023 15:00',
+            'airport':'Dubai International Airport [DXB]'.upper(),
+            'is_error': False,
+            'status':'Under Customs Transit Process',
+            'color':'green'
         },
         #5h 10m
         # {
