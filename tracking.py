@@ -140,7 +140,7 @@ GERMANY""".upper(),
             'date':'25-04-2023 15:00',
             'airport':'Dubai International Airport [DXB]'.upper(),
             'is_error': False,
-            'status':'Under Customs Transit Process',
+            'status':'Document Query: Under Customs Transit Process',
             'color':'orange'
         },
         #5h 10m
