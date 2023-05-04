@@ -365,7 +365,7 @@ RAK, UAE.""".upper(),
         {
             'time':'11:35',
             'date':'27-04-2023 11:35',
-            'airport':'Goods delivered to Recipient Address'.upper(),
+            'airport':'Goods delivered to receiver [DXB]'.upper(),
             'is_error': False,
             'status':'Delivered',
             'color':'green'
