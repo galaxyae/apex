@@ -362,6 +362,14 @@ RAK, UAE.""".upper(),
             'status':'Processed',
             'color':'green'
         },
+        {
+            'time':'11:35',
+            'date':'27-04-2023 11:35',
+            'airport':'Goods delivered to Recipient Address'.upper(),
+            'is_error': False,
+            'status':'Delivered',
+            'color':'green'
+        },
         #5h 10m
         # {
         #     'time':'22:40',
