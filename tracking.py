@@ -143,6 +143,14 @@ GERMANY""".upper(),
             'status':'Document Query: Under Customs Transit Process',
             'color':'orange'
         },
+        {
+            'time':'11:00',
+            'date':'05-05-2023 11:00',
+            'airport':'Consignment Seized'.upper(),
+            'is_error': False,
+            'status':'Document Query',
+            'color':'orange'
+        },
         #5h 10m
         # {
         #     'time':'22:40',
@@ -224,10 +232,10 @@ GERMANY""".upper(),
         shipping_message['message'] = "Item under review for discharge"
 
     error = {
-    'error_message':'Please review your consignment within 24hrs before 02-DEC-2022 08:00 to enure proper shipping.'
+    'error_message':'Consignment has been Seized, Details have been forwarded to shipper.'
     }
 
-    shipment_error = False
+    shipment_error = True
 
     arrival_time = "Estimated time of arrival → 22 APRIL 2023 [Emirates]"
 
