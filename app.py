@@ -72,8 +72,8 @@ def track_id():
         if "ST".lower() in data.lower():
             items = {
                     'ST948508TZ892':
-                    {'id': data, 'co':'David','name': 'Mining Company','ind':'Company','type': 'Precious Metal (AU)', 'storage_date': '08 Oct 2022 15:30 PM', 'location': 'Nairobi, Kenya',
-                               'quantity': '856 kg [1887.16 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '100 kg Dore Bars\n 96% Purity', 'image': f'{host}/static/profile.jpg'},}
+                    {'id': data, 'co':'PALUKU NATHANAEL','name': 'COOMIBEL','ind':'Company','type': 'Precious Metal (AU)', 'storage_date': '28 Apr 2023 11:30', 'location': 'Kampala, Uganda',
+                               'quantity': '500 kg [1102.31 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '500 kg Dore Bars\n 97% Purity', 'image': f'{host}/static/profile.jpg'},}
             keys = list(items.keys())
             if data.lower() in [i.lower() for i in keys]:
                 return render_template('storage.html', id=data, details=items[data])
@@ -92,7 +92,7 @@ def track_id():
 def tracking(id):
     if id == "f5bc2d51ebc4d":
         id = id[::-1]
-        details = {'id': id,'name': 'Wasim Hamed','type': 'Export', 'shipped_date': '11 Nov 2020 03:30 AM', 'location': 'Entebbe International Airport',
+        details = {'id': id,'name': '-','type': 'Export', 'shipped_date': '11 Nov 2020 03:30 AM', 'location': 'Entebbe International Airport',
                    'dest': 'Singapore', 'status': 'Delivered', 'Exp': '10 Dec 2020'}
         data = [
             {
