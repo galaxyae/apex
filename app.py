@@ -73,7 +73,11 @@ def track_id():
             items = {
                     'ST948508TZ892':
                     {'id': data, 'co':'PALUKU NATHANAEL','name': 'COOMIBEL','ind':'Company','type': 'Precious Metal (AU)', 'storage_date': '28 Apr 2023 11:30', 'location': 'Kampala, Uganda',
-                               'quantity': '500 kg [1102.31 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '500 kg Dore Bars\n 97% Purity', 'image': f'{host}/static/profile.jpg'},}
+                               'quantity': '500 kg [1102.31 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '500 kg Dore Bars\n 97% Purity', 'image': f'{host}/static/profile.jpg'},
+                    'ST711DA610991':
+                    {'id': data, 'co':'PALUKU NATHANAEL','name': 'COOMIBEL','ind':'Company','type': 'Precious Metal (AU)', 'storage_date': '12 Jun 2023 14:30', 'location': 'Kampala, Uganda',
+                               'quantity': '5000 kg [11023.11 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '5000 kg Dore Bars\n 97% Purity', 'image': f'{host}/static/profile.jpg'},
+                    }
             keys = list(items.keys())
             if data.lower() in [i.lower() for i in keys]:
                 return render_template('storage.html', id=data, details=items[data])
