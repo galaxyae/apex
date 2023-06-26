@@ -48,6 +48,16 @@ def five_thousand():
     page = session.post(url,headers=headers,data=payload).text
     return page
 
+@app.route('/fe7d1bfc-2751-49dd-823a-6cea6887d8fd')
+def elly_one_thousand():
+    url = f"{host}/9108443e3e2b035c0e167594a63ff2fde9c9cea9"
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    payload = {'tracking':'ST711DA61D991'}
+
+    session = requests.Session()
+    page = session.post(url,headers=headers,data=payload).text
+    return page
+
 #tracking : 9611941b-5145-4161-87ef-3c7669a7704c
 @app.route('/9611941b-5145-4161-87ef-3c7669a7704c')
 def custom_tracking():
@@ -87,6 +97,9 @@ def track_id():
                     'ST711DA610991':
                     {'id': data, 'co':'PALUKU NATHANAEL','name': 'COOMIBEL','ind':'Company','type': 'Precious Metal (AU)', 'storage_date': '12 Jun 2023 14:30', 'location': 'Kampala, Uganda',
                                'quantity': '5000 kg [11023.11 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '5000 kg Dore Bars\n 97% Purity', 'image': f'{host}/static/profile.jpg'},
+                    'ST711DA61D991':
+                    {'id': data, 'co':'ELLY KALEKWA','name': 'ELLY KALEKWA','ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': '16 May 2023 14:30', 'location': 'Kampala, Uganda',
+                               'quantity': '100 kg [220.46 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '100 kg Dore Bars\n 97% Purity', 'image': f'{host}/static/profile.jpg'},
                     }
             keys = list(items.keys())
             if data.lower() in [i.lower() for i in keys]:
