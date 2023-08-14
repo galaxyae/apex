@@ -536,8 +536,8 @@ def uganda_dubai():
     transit = [
         {
             'current':'Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB]'.upper(),#' - Dubai International Airport [DXB]',
-            'departure':'Emirates, EK 0730 → Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB] - BOEING 777-300ER',
-            'arrival':'-',
+            'departure':'Emirates, EK 0730 → Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB] 14-08-2023 04:25 PM [ Duration 5h15m ]',
+            'arrival':'Emirates, EK 0730 → ETA Dubai, Dubai International Airport [DXB] 14-08-2023 10:50 PM',
             'comment': 'Processing'
         },
         # {
@@ -570,37 +570,37 @@ def uganda_dubai():
         #     'color':'green'
         # },
         {
-            'time':'13:00',
-            'date':'20-04-2023 13:00',
+            'time':'13:50',
+            'date':'14-08-2023 13:50',
             'airport':'Arrived at Entebbe, Entebbe International Airport [EBB]'.upper(),
             'is_error': False,
-            'status':'EK 0730 - ETD 20-04-2023 04:25 PM | ETA 20-04-2023 10:50 PM',
+            'status':'EK 0730 - ETD 14-08-2023 04:25 PM | ETA 14-08-2023 10:50 PM',
             'color':'green'
         },
         {
-            'time':'16:25',
-            'date':'20-04-2023 16:25',
+            'time':'13:50',
+            'date':'14-08-2023 13:50',
             'airport':'Entebbe, Entebbe International Airport [EBB]'.upper(),
             'is_error': False,
-            'status':'EK0730 - Dispatched',
+            'status':'Processing - Awaiting Departure',
             'color':'green'
         },
-        {
-            'time':'10:50',
-            'date':'20-04-2023 10:50',
-            'airport':'Arrived at Dubai International Airport [DXB]'.upper(),
-            'is_error': False,
-            'status':'Processed',
-            'color':'green'
-        },
-        {
-            'time':'11:35',
-            'date':'27-04-2023 11:35',
-            'airport':'Goods delivered to receiver [DXB]'.upper(),
-            'is_error': False,
-            'status':'Delivered',
-            'color':'green'
-        },
+        # {
+        #     'time':'10:50',
+        #     'date':'20-04-2023 10:50',
+        #     'airport':'Arrived at Dubai International Airport [DXB]'.upper(),
+        #     'is_error': False,
+        #     'status':'Processed',
+        #     'color':'green'
+        # },
+        # {
+        #     'time':'11:35',
+        #     'date':'27-04-2023 11:35',
+        #     'airport':'Goods delivered to receiver [DXB]'.upper(),
+        #     'is_error': False,
+        #     'status':'Delivered',
+        #     'color':'green'
+        # },
         #5h 10m
         # {
         #     'time':'22:40',
@@ -677,7 +677,7 @@ def uganda_dubai():
     ]
 
     intial_message = {'message':'BOOKED ON FLIGHT EK 0730'}
-    has_initial_message = True
+    has_initial_message = False
     shipping_message = {}
     if not has_shipped:
         shipping_message['message'] = "Item under review for discharge"
