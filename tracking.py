@@ -536,7 +536,7 @@ def uganda_dubai():
     transit = [
         {
             'current':'Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB]'.upper(),#' - Dubai International Airport [DXB]',
-            'departure':'-',
+            'departure':'Emirates, EK 0730 → Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB] - BOEING 777-300ER',
             'arrival':'-',
             'comment': 'Processing'
         },
@@ -676,7 +676,7 @@ def uganda_dubai():
         },
     ]
 
-    intial_message = {'message':'BOOKED'}
+    intial_message = {'message':'BOOKED ON FLIGHT EK 0730'}
     has_initial_message = True
     shipping_message = {}
     if not has_shipped:
