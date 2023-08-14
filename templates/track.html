@@ -1250,27 +1250,33 @@ linesAboveImages: true
                                   </div>
                                 </div>
                                 <ul class="events">
-                                {% for flight in flight_progress%}
-                                  {% if not flight['is_error']%}
-                                    <li>
-                                      <time datetime="{{flight['time']}}">{{flight['date']}}</time>
-                                        {% if flight['color'] != 'default'%}
-                                        <span style="color:{{flight['color']}}">
-                                          <strong class="text-success">
-                                        {%else%}
-                                        <span>
-                                          <strong>
-                                        {% endif %}
-                                        {{flight['airport']}}</strong> {{flight['status']}}</span></li>
-                                    <li>
-                                  {% else %}
-                                    <li>
-                                      <time datetime="{{flight['time']}}"  style="color: red;">{{flight['date']}}</time>
-                                      <span style="color: red;"><strong style="color: red;">{{flight['airport']}}</strong> {{flight['status']}}</span>
-                                    </li>
-                                  {% endif %}
-                                {% endfor %}
-
+                                {% if has_initial_message %}
+                                <td style="height: 200px;">
+                                  <h3>{{intial_message['message']}}</h3>
+                                </td>
+                                <hr>
+                                {%else%}
+                                    {% for flight in flight_progress%}
+                                    {% if not flight['is_error']%}
+                                        <li>
+                                        <time datetime="{{flight['time']}}">{{flight['date']}}</time>
+                                            {% if flight['color'] != 'default'%}
+                                            <span style="color:{{flight['color']}}">
+                                            <strong class="text-success">
+                                            {%else%}
+                                            <span>
+                                            <strong>
+                                            {% endif %}
+                                            {{flight['airport']}}</strong> {{flight['status']}}</span></li>
+                                        <li>
+                                    {% else %}
+                                        <li>
+                                        <time datetime="{{flight['time']}}"  style="color: red;">{{flight['date']}}</time>
+                                        <span style="color: red;"><strong style="color: red;">{{flight['airport']}}</strong> {{flight['status']}}</span>
+                                        </li>
+                                    {% endif %}
+                                    {% endfor %}
+                                {%endif%}
                                 </ul>
                                   <h2>{{arrival_time}}</h2>
                                 </div>
