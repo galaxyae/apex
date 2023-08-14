@@ -585,6 +585,14 @@ def uganda_dubai():
             'status':'Processing - Awaiting Departure',
             'color':'green'
         },
+        {
+            'time':'16:25',
+            'date':'14-08-2023 16:25',
+            'airport':'Entebbe, Entebbe International Airport [EBB]'.upper(),
+            'is_error': False,
+            'status':'EK0730 - Dispatched',
+            'color':'green'
+        },
         # {
         #     'time':'10:50',
         #     'date':'20-04-2023 10:50',
