@@ -688,7 +688,7 @@ def uganda_dubai():
 
     shipment_error = False
 
-    arrival_time = "Estimated time of arrival → 20 APRIL 2023 [Emirates]"
+    arrival_time = "Estimated time of arrival → 14 AUGUST 2023 [Emirates]"
 
     # check
     increment = 100 / len(checkpoints)
