@@ -593,14 +593,22 @@ def uganda_dubai():
             'status':'EK0730 - Dispatched',
             'color':'green'
         },
-        # {
-        #     'time':'10:50',
-        #     'date':'20-04-2023 10:50',
-        #     'airport':'Arrived at Dubai International Airport [DXB]'.upper(),
-        #     'is_error': False,
-        #     'status':'Processed',
-        #     'color':'green'
-        # },
+        {
+            'time':'16:50',
+            'date':'21-08-2023 16:50',
+            'airport':'Arrived at Dubai International Airport [DXB]'.upper(),
+            'is_error': False,
+            'status':'Processing',
+            'color':'green'
+        },
+        {
+            'time':'16:50',
+            'date':'21-08-2023 16:50',
+            'airport':'Shipment under security query '.upper(),
+            'is_error': False,
+            'status':'Pending Clearance',
+            'color':'orange'
+        },
         # {
         #     'time':'11:35',
         #     'date':'27-04-2023 11:35',
@@ -696,7 +704,7 @@ def uganda_dubai():
 
     shipment_error = False
 
-    arrival_time = "Estimated time of arrival → 14 AUGUST 2023 [Emirates]"
+    arrival_time = "Estimated time of arrival → 21 AUGUST 2023 [Emirates]"
 
     # check
     increment = 100 / len(checkpoints)
