@@ -38,6 +38,16 @@ def sample():
     page = session.post(url,headers=headers,data=payload).text
     return page
 
+@app.route('/fe7d1bfc-2751-49dd-823a-6cea6887d7fa')
+def sample2():
+    url = f"{host}/9108443e3e2b035c0e167594a63ff2fde9c9cea9"
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    payload = {'tracking':'ST948508TZ899'}
+
+    session = requests.Session()
+    page = session.post(url,headers=headers,data=payload).text
+    return page
+
 @app.route('/fe7d1bfc-2751-49dd-823a-6cea6887d8f2')
 def five_thousand():
     url = f"{host}/9108443e3e2b035c0e167594a63ff2fde9c9cea9"
@@ -112,6 +122,9 @@ def track_id():
                     'ST711DA6FE751':
                     {'id': data, 'co':'Dr Wilson Chidozie Nwankwo'.upper(),'name': 'SAM OCOM','ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': '17 March 2023 14:30', 'location': 'Kampala, Uganda',
                                'quantity': '1000 kg [2204.62 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '10 Metallic boxes containing 1000 kg Dore Bars\n 97% Purity', 'image': f'{host}/static/profile.jpg'},
+                    'ST948508TZ899':
+                    {'id': data, 'co':'PALUKU NATHANAEL','name': 'COOMIBEL','ind':'Company','type': 'Precious Metal (AU)', 'storage_date': '28 Aug 2023 11:30', 'location': 'Kampala, Uganda',
+                               'quantity': '200 kg [441 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '200 kg Dore Bars\n 96.5% Purity', 'image': f'{host}/static/profile.jpg'},
                     }
             keys = list(items.keys())
             if data.lower() in [i.lower() for i in keys]:
