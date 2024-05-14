@@ -98,6 +98,17 @@ def custom_tracking_uae():
     page = session.post(url,headers=headers,data=payload).text
     return page
 
+@app.route('/9611941b-5145-4161-87ef-167594a63f3d')
+def custom_tracking_italy():
+    url = f"{host}/9108443e3e2b035c0e167594a63ff2fde9c9cea9"
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    payload = {'tracking':'176-33858982'}
+
+    session = requests.Session()
+    page = session.post(url,headers=headers,data=payload).text
+    return page
+
+
 @app.route('/privacy')
 def privacy():
     return render_template('privacypolicy.html')
@@ -135,6 +146,8 @@ def track_id():
         #     return track.uganda_uae()
         elif "TR" in data and data == 'TR871153A77D4':
             return track.uganda_dubai()
+        elif "176" in data and data == '176-33858982':
+            return track.uganda_italy()
         else:
             return redirect(url_for('index'))
     except Exception as e:
@@ -160,7 +173,7 @@ def tracking(id):
     else:
         return redirect(url_for('index'))
 
-@app.route('/storage/9108443e3e2b035c0e167594a63ff2fde9a9cea98<id>7dcf5bc2d51ebc4d9a9c')
+@app.route('/storage/9108443e3e2b035c0e167594a63ff2fde9a9cea987dcf5bc2d51ebc4d9a9c')
 def storage(id):
     if id == "f5bc2d51ebc4d":
         id = id[::-1]
