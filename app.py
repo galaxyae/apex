@@ -133,9 +133,9 @@ def track_id():
                     'ST711DA6FE751':
                     {'id': data, 'co':'Dr Wilson Chidozie Nwankwo'.upper(),'name': 'SAM OCOM','ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': '17 March 2023 14:30', 'location': 'Kampala, Uganda',
                                'quantity': '1000 kg [2204.62 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '10 Metallic boxes containing 1000 kg Dore Bars\n 97% Purity', 'image': f'{host}/static/profile.jpg'},
-                    'ST948508TZ899':
-                    {'id': data, 'co':'PALUKU NATHANAEL','name': 'COOMIBEL','ind':'Company','type': 'Precious Metal (AU)', 'storage_date': '28 Aug 2023 11:30', 'location': 'Kampala, Uganda',
-                               'quantity': '200 kg [441 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '200 kg Dore Bars\n 96.5% Purity', 'image': f'{host}/static/profile.jpg'},
+                    'ST948508TB899':
+                    {'id': data, 'co':'ILUNGA KITOMBOLWA KARIM & Khidasheli David'.upper(),'name': 'ILUNGA KITOMBOLWA KARIM & Khidasheli Davi'.upper(),'ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': '10 June 2024 09:22', 'location': 'Kampala, Uganda',
+                               'quantity': '2865 KG Nuggets and 135 KG Gold Bars', 'cid':'3e2b035c0e167594a63f', 'description': '2865 KG Nuggets and 135 KG Gold Bars\n ~96.5% Purity', 'image': f'{host}/static/profile.jpg'},
                     }
             keys = list(items.keys())
             if data.lower() in [i.lower() for i in keys]:
