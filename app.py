@@ -68,11 +68,11 @@ def elly_one_thousand():
     page = session.post(url,headers=headers,data=payload).text
     return page
 
-@app.route('/fe7d1bfc-27e1-49dd-823a-6cea7117d8fe')
+@app.route('/fe7d1bfc-27e1-49dd-823a-6cea711224fa')
 def dr():
     url = f"{host}/9108443e3e2b035c0e167594a63ff2fde9c9cea9"
     headers = {'User-Agent': 'Mozilla/5.0'}
-    payload = {'tracking':'ST711DA6FE751'}
+    payload = {'tracking':'ST948508TB899'}
 
     session = requests.Session()
     page = session.post(url,headers=headers,data=payload).text
