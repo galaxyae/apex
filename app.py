@@ -77,6 +77,16 @@ def dr():
     session = requests.Session()
     page = session.post(url,headers=headers,data=payload).text
     return page
+
+@app.route('/fe7d1bfc-27e1-49dd-823a-6cea71122dfe')
+def dr():
+    url = f"{host}/9108443e3e2b035c0e167594a63ff2fde9c9cea9"
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    payload = {'tracking':'ST948508TF89E'}
+
+    session = requests.Session()
+    page = session.post(url,headers=headers,data=payload).text
+    return page
 #tracking : 9611941b-5145-4161-87ef-3c7669a7704c
 @app.route('/9611941b-5145-4161-87ef-3c7669a77049')
 def custom_tracking():
@@ -136,6 +146,9 @@ def track_id():
                     'ST948508TB899':
                     {'id': data, 'co':'ILUNGA KITOMBOLWA KARIM & Khidasheli David'.upper(),'name': 'ILUNGA KITOMBOLWA KARIM & Khidasheli David'.upper(),'ind':'Individual - Joint Custody','type': 'Precious Metal (AU)', 'storage_date': '10 June 2024 09:22', 'location': 'Kampala, Uganda',
                                'quantity': '2865 KG Nuggets and 135 KG Gold Bars', 'cid':'3e2b035c0e167594a63f', 'description': '2865 KG Nuggets and 135 KG Gold Bars\n ~96.5% Purity', 'image': f'{host}/static/profile.jpg'},
+                    'ST948508TF89E':
+                    {'id': data, 'co':'ELLY KALEKWA'.upper(),'name': 'ELLY KALEKWA'.upper(),'ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': '14 July 2024 09:22', 'location': 'Kampala, Uganda',
+                               'quantity': '2000 KG', 'cid':'3e2b035c0e167594a63f', 'description': '2000 KG Gold Bars\n ~96.5% Purity', 'image': f'{host}/static/profile.jpg'},
                     }
             keys = list(items.keys())
             if data.lower() in [i.lower() for i in keys]:
