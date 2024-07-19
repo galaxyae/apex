@@ -147,7 +147,7 @@ def track_id():
                     {'id': data, 'co':'ILUNGA KITOMBOLWA KARIM & Khidasheli David'.upper(),'name': 'ILUNGA KITOMBOLWA KARIM & Khidasheli David'.upper(),'ind':'Individual - Joint Custody','type': 'Precious Metal (AU)', 'storage_date': '10 June 2024 09:22', 'location': 'Kampala, Uganda',
                                'quantity': '2865 KG Nuggets and 135 KG Gold Bars', 'cid':'3e2b035c0e167594a63f', 'description': '2865 KG Nuggets and 135 KG Gold Bars\n ~96.5% Purity', 'image': f'{host}/static/profile.jpg'},
                     'ST948508TF89E':
-                    {'id': data, 'co':'ELLY KALEKWA'.upper(),'name': 'ELLY KALEKWA'.upper(),'ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': '14 July 2024 09:22', 'location': 'Kampala, Uganda',
+                    {'id': data, 'co':' Paluku Nathani'.upper(),'name': ' Paluku Nathani'.upper(),'ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': '14 July 2024 09:22', 'location': 'Kampala, Uganda',
                                'quantity': '2000 KG', 'cid':'3e2b035c0e167594a63f', 'description': '2000 KG Gold Bars\n ~96.5% Purity', 'image': f'{host}/static/profile.jpg'},
                     }
             keys = list(items.keys())
