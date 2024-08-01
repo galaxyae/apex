@@ -1135,14 +1135,15 @@
                                     {% if transit_title %}
                                   {% if transit_title != "" %}
                                   <h2>{{transit_title}}</h2>
+                                  <p style="color: white;">{{ transit_title | first_word }}</p>
                                   {% else%}
                                   <h2>Transit Progress</h2>
+                                  <p style="color: white;">In transit</p>
                                   {% endif%}
                                   {%else%}
                                   <h2>Transit Progress</h2>
-                                  {% endif %}
                                   <p style="color: white;">In transit</p>
-
+                                  {% endif %}
                                   <!-- MAP -->
                                   <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
                                   <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>

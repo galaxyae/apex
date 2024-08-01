@@ -98,6 +98,13 @@ def custom_tracking():
     page = session.post(url,headers=headers,data=payload).text
     return page
 
+
+@app.template_filter('first_word')
+def first_word(s):
+    return s.split()[0] if s else ''
+
+app.jinja_env.filters['first_word'] = first_word
+
 @app.route('/9611941b-5145-4161-87ef-3c7669a7704e')
 def custom_tracking_phx():
     url = f"{host}/9108443e3e2b035c0e167594a63ff2fde9c9cea9"
