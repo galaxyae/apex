@@ -115,7 +115,7 @@ def uganda_new_mexico():
             'date':'01-08-2024 12:00',
             'airport':'Arrived at Apex Logistics Sorting Facility Dar es Salaam - Tanzania'.upper(),
             'is_error': False,
-            'status':'Processed',
+            'status':'Booked',
             'color':'green'
         },
         {
@@ -126,22 +126,22 @@ def uganda_new_mexico():
             'status':'Booked',
             'color':'green'
         },
-        {
-            'time':'15:25',
-            'date':'05-08-2024 15:25',
-            'airport':'Dar es Salaam, Julius Nyerere International Airport [DAR]'.upper(),
-            'is_error': False,
-            'status':'EK 0726 - ETD 05-08-2024 15:25 | ETA 06-08-2024 21:50',
-            'color':'green'
-        },
-        {
-            'time':'15:25',
-            'date':'05-08-2024 15:25',
-            'airport':'Dar es Salaam, Julius Nyerere International Airport [DAR]'.upper(),
-            'is_error': False,
-            'status':'EK 0726 - Departed',
-            'color':'green'
-        },
+        # {
+        #     'time':'15:25',
+        #     'date':'05-08-2024 15:25',
+        #     'airport':'Dar es Salaam, Julius Nyerere International Airport [DAR]'.upper(),
+        #     'is_error': False,
+        #     'status':'EK 0726 - ETD 05-08-2024 15:25 | ETA 06-08-2024 21:50',
+        #     'color':'green'
+        # },
+        # {
+        #     'time':'15:25',
+        #     'date':'05-08-2024 15:25',
+        #     'airport':'Dar es Salaam, Julius Nyerere International Airport [DAR]'.upper(),
+        #     'is_error': False,
+        #     'status':'EK 0726 - Departed',
+        #     'color':'green'
+        # },
         # {
         #     'time':'16:25',
         #     'date':'21-04-2023 16:25',
