@@ -126,14 +126,22 @@ def uganda_new_mexico():
             'status':'Booked',
             'color':'green'
         },
-        # {
-        #     'time':'13:00',
-        #     'date':'21-04-2023 13:00',
-        #     'airport':'Entebbe, Entebbe International Airport [EBB]'.upper(),
-        #     'is_error': False,
-        #     'status':'EK 0730 - ETD 21-04-2023 04:25 PM | ETA 21-04-2023 10:50 PM',
-        #     'color':'green'
-        # },
+        {
+            'time':'15:25',
+            'date':'05-08-2024 15:25',
+            'airport':'Dar es Salaam, Julius Nyerere International Airport [DAR]'.upper(),
+            'is_error': False,
+            'status':'EK 0726 - ETD 05-08-2024 15:25 | ETA 06-08-2024 21:50',
+            'color':'green'
+        },
+        {
+            'time':'15:25',
+            'date':'05-08-2024 15:25',
+            'airport':'Dar es Salaam, Julius Nyerere International Airport [DAR]'.upper(),
+            'is_error': False,
+            'status':'EK 0726 - Departed',
+            'color':'green'
+        },
         # {
         #     'time':'16:25',
         #     'date':'21-04-2023 16:25',
