@@ -123,7 +123,7 @@ def uganda_new_mexico():
             'date':'01-08-2024 15:00',
             'airport':'Boooked Flight Scheduled for 05 August 2024 [DAR - DXB]'.upper(),
             'is_error': False,
-            'status':'Processed',
+            'status':'Booked',
             'color':'green'
         },
         # {
