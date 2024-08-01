@@ -68,7 +68,7 @@ def uganda_new_mexico():
                     Dar es Salaam
                     Tanzania
                 """,
-        'contact':'N/A'
+        'contact':'+255 686 431166'
     }
 
 
