@@ -68,7 +68,7 @@ def uganda_new_mexico():
                     Dar es Salaam
                     Tanzania
                 """,
-        'contact':'info@newcrestminingltd.com'
+        'contact':'N/A'
     }
 
 
