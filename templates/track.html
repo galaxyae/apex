@@ -1132,7 +1132,15 @@
                                 </style>
 
                                 <div class="container">
+                                    {% if transit_title %}
+                                  {% if transit_title != "" %}
+                                  <h2>{{transit_title}}</h2>
+                                  {% else%}
                                   <h2>Transit Progress</h2>
+                                  {% endif%}
+                                  {%else%}
+                                  <h2>Transit Progress</h2>
+                                  {% endif %}
                                   <p style="color: white;">In transit</p>
 
                                   <!-- MAP -->
