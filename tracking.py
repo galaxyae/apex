@@ -113,7 +113,7 @@ def uganda_new_mexico():
         {
             'time':'12:00',
             'date':'01-08-2024 12:00',
-            'airport':'Arrived at Apex Logistics Sorting Facility Dar es Salaam - Kenya'.upper(),
+            'airport':'Arrived at Apex Logistics Sorting Facility Dar es Salaam - Tanzania'.upper(),
             'is_error': False,
             'status':'Processed',
             'color':'green'
