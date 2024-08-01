@@ -11,18 +11,22 @@ class Tracking():
 
 def uganda_new_mexico():
     locations = [{
-            'country': 'Entebbe',
-            'code': 'UG',
-            'airport': 'EBB'
+            'country': 'Dar es Salaam',
+            'code': 'TZ',
+            'airport': 'DAR'
         },{
             'country': 'Dubai',
             'code': 'AE',
             'airport': 'DXB'
         },{
-            'country': 'Frankfurt am Main',
-            'code': 'DE',
-            'airport': 'FRA'
-        }]
+            'country': 'San Francisco',
+            'code': 'US',
+            'airport': 'SFO'
+        },{
+            'country': 'Arizona City',
+            'code': 'US',
+            'airport': 'PHX'
+        },]
 
     map = []
     checkpoints = [i['airport'].upper() for i in locations]
@@ -58,10 +62,11 @@ def uganda_new_mexico():
             )
     print(lines)
     sender = {
-        'name':'New Crest Mining Limited',
+        'name':'NDJ GOLD EXPLORATION CO. LTD',
         'address':"""
-                    PLOT 7, LOURDEL ROAD
-                    NAGURU - UGANDA
+                    Plot No.16 Mbezi Beach
+                    Dar es Salaam
+                    Tanzania
                 """,
         'contact':'info@newcrestminingltd.com'
     }
@@ -70,15 +75,15 @@ def uganda_new_mexico():
     product = {
         'name':'Precious Minerals',
         'content':[
-            {'item': '1 Box(es) of GOLD AU BARS [1 KGs]'},
+            {'item': '1 Box(es) of GOLD AU BARS [32 KGs]'},
         ]
     }
 
     transit = [
         {
-            'current':'Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB]'.upper(),#' - Dubai International Airport [DXB]',
-            'departure':'Emirates, EK 0730 → Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB] 21-04-2023 04:25 [ Duration 5h15m ]',
-            'arrival':'Emirates, EK 0730 → ETA Dubai, Dubai International Airport [DXB] 21-04-2023 10:50 PM',
+            'current':'Dar es Salaam, Julius Nyerere International Airport [DAR] - Dubai, Dubai International Airport [DXB]'.upper(),#' - Dubai International Airport [DXB]',
+            'departure':'Emirates, EK 0726 → Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB] 05-08-2024 03:25 [ Duration 5h15m ]',
+            'arrival':'Emirates, EK 0726 → ETA Dubai, Dubai International Airport [DXB] 20-04-2023 10:50 PM',
             'comment': 'Processed'
         },
         # {
@@ -96,62 +101,72 @@ def uganda_new_mexico():
     ]
 
     reciever = {
-        'name':'JURI STREBEL',
-        'address':"""KAISERLINOE 156766, ULMEN
-GERMANY""".upper(),
-        'contact':'Juri.strebel@gmail.com , +491781401260'
+        'name':'ALLY SHUKURU RUBANGURA',
+        'address':"""3255 E Roosevelt Street
+        Apt. 212 Phoenix, AZ 85008
+        Arizona - USA
+        """.upper(),
+        'contact':'N/A'
     }
     # Harry Reid International Airport (LAS)
     flight_progress = [
         {
             'time':'12:00',
-            'date':'21-04-2023 12:00',
-            'airport':'Arrived at Apex Logistics Sorting Facility KAMPALA - UGANDA'.upper(),
+            'date':'01-08-2024 12:00',
+            'airport':'Arrived at Apex Logistics Sorting Facility Dar es Salaam - Kenya'.upper(),
             'is_error': False,
             'status':'Processed',
             'color':'green'
         },
         {
-            'time':'13:00',
-            'date':'21-04-2023 13:00',
-            'airport':'Entebbe, Entebbe International Airport [EBB]'.upper(),
+            'time':'12:00',
+            'date':'01-08-2024 15:00',
+            'airport':'Boooked Flight Scheduled for 05 August 2024 [DAR - DXB]'.upper(),
             'is_error': False,
-            'status':'EK 0730 - ETD 21-04-2023 04:25 PM | ETA 21-04-2023 10:50 PM',
+            'status':'Processed',
             'color':'green'
         },
-        {
-            'time':'16:25',
-            'date':'21-04-2023 16:25',
-            'airport':'Entebbe, Entebbe International Airport [EBB]'.upper(),
-            'is_error': False,
-            'status':'EK0730 - Dispatched',
-            'color':'green'
-        },
-        {
-            'time':'10:50',
-            'date':'21-04-2023 10:50',
-            'airport':'Arrived at Dubai International Airport [DXB]'.upper(),
-            'is_error': False,
-            'status':'Reviewed',
-            'color':'green'
-        },
-        {
-            'time':'15:00',
-            'date':'25-04-2023 15:00',
-            'airport':'Dubai International Airport [DXB]'.upper(),
-            'is_error': False,
-            'status':'Document Query: Under Customs Transit Process',
-            'color':'orange'
-        },
-        {
-            'time':'11:00',
-            'date':'05-05-2023 11:00',
-            'airport':'Consignment Seized'.upper(),
-            'is_error': False,
-            'status':'Document Query',
-            'color':'orange'
-        },
-        #5h 10m
+        # {
+        #     'time':'13:00',
+        #     'date':'21-04-2023 13:00',
+        #     'airport':'Entebbe, Entebbe International Airport [EBB]'.upper(),
+        #     'is_error': False,
+        #     'status':'EK 0730 - ETD 21-04-2023 04:25 PM | ETA 21-04-2023 10:50 PM',
+        #     'color':'green'
+        # },
+        # {
+        #     'time':'16:25',
+        #     'date':'21-04-2023 16:25',
+        #     'airport':'Entebbe, Entebbe International Airport [EBB]'.upper(),
+        #     'is_error': False,
+        #     'status':'EK0730 - Dispatched',
+        #     'color':'green'
+        # },
+        # {
+        #     'time':'10:50',
+        #     'date':'21-04-2023 10:50',
+        #     'airport':'Arrived at Dubai International Airport [DXB]'.upper(),
+        #     'is_error': False,
+        #     'status':'Reviewed',
+        #     'color':'green'
+        # },
+        # {
+        #     'time':'15:00',
+        #     'date':'25-04-2023 15:00',
+        #     'airport':'Dubai International Airport [DXB]'.upper(),
+        #     'is_error': False,
+        #     'status':'Document Query: Under Customs Transit Process',
+        #     'color':'orange'
+        # },
+        # {
+        #     'time':'11:00',
+        #     'date':'05-05-2023 11:00',
+        #     'airport':'Consignment Seized'.upper(),
+        #     'is_error': False,
+        #     'status':'Document Query',
+        #     'color':'orange'
+        # },
+        # #5h 10m
         # {
         #     'time':'22:40',
         #     'date':'30-12-2021 22:40',
@@ -203,7 +218,7 @@ GERMANY""".upper(),
         # },
     ]
 
-    has_shipped = True
+    has_shipped = False
     has_arrived = False
 
 
@@ -229,19 +244,19 @@ GERMANY""".upper(),
 
     shipping_message = {}
     if not has_shipped:
-        shipping_message['message'] = "Item under review for discharge"
+        shipping_message['message'] = "Item awaiting discharge."
 
     error = {
     'error_message':'Consignment has been Seized, Details have been forwarded to shipper.'
     }
 
-    shipment_error = True
+    shipment_error = False
 
-    arrival_time = "Estimated time of arrival → 22 APRIL 2023 [Emirates]"
+    arrival_time = "Estimated time of arrival → 10 AUGUST 2024 [Emirates]"
 
     # check
     increment = 100 / len(checkpoints)
-    progress = 1
+    progress = 0
     return render_template('track.html', item="", ui="", shipment=product, has_arrived=has_arrived, has_arrived_message=has_arrived_message, sender=sender, has_shipped=has_shipped, shipping_message=shipping_message, product=transit, receiver=reciever, amount=len(transit), map = unique, lines = lines, source = locations[0]['country'].title(), checkpoints=checkpoints, checkpoints_length=len(checkpoints), increment=increment, progress=progress, error=error, flight_progress=flight_progress, arrival_time=arrival_time, shipment_error=shipment_error)
 
 
@@ -308,11 +323,17 @@ def uganda_uae():
 
     transit = [
         {
-            'current':'Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB]'.upper(),#' - Dubai International Airport [DXB]',
-            'departure':'Emirates, EK 0730 → Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB] 20-04-2023 04:25 [ Duration 5h15m ]',
-            'arrival':'Emirates, EK 0730 → ETA Dubai, Dubai International Airport [DXB] 20-04-2023 10:50 PM',
+            'current':'Dar es Salaam, Julius Nyerere International Airport [DAR] - Dubai, Dubai International Airport [DXB]'.upper(),#' - Dubai International Airport [DXB]',
+            'departure':'Emirates, EK 0726 → Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB] 05-08-2024 03:25 [ Duration 5h15m ]',
+            'arrival':'Emirates, EK 0726 → ETA Dubai, Dubai International Airport [DXB] 20-04-2023 10:50 PM',
             'comment': 'Processed'
         },
+        # {
+        #     'current':'Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB]'.upper(),#' - Dubai International Airport [DXB]',
+        #     'departure':'Emirates, EK 0726 → Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB] 20-04-2023 04:25 [ Duration 5h15m ]',
+        #     'arrival':'Emirates, EK 0726 → ETA Dubai, Dubai International Airport [DXB] 20-04-2023 10:50 PM',
+        #     'comment': 'Processed'
+        # },
         # {
         #     'current':'Dubai, Dubai International Airport [DXB] - San Francisco International Airport [SFO]'.upper(),#' - Dubai International Airport [DXB]',
         #     'departure':'Emirates, EK 0225 → Dubai, Dubai International Airport [DXB] - San Francisco International Airport [SFO] 02-01-2022 08:45 [ Duration 14h15m ]',
@@ -468,7 +489,7 @@ RAK, UAE.""".upper(),
 
     # check
     increment = 100 / len(checkpoints)
-    progress = 2
+    progress = .5
     return render_template('track.html', item="", ui="", shipment=product, has_arrived=has_arrived, has_arrived_message=has_arrived_message, sender=sender, has_shipped=has_shipped, shipping_message=shipping_message, product=transit, receiver=reciever, amount=len(transit), map = unique, lines = lines, source = locations[0]['country'].title(), checkpoints=checkpoints, checkpoints_length=len(checkpoints), increment=increment, progress=progress, error=error, flight_progress=flight_progress, arrival_time=arrival_time, shipment_error=shipment_error)
 
 def uganda_italy():
