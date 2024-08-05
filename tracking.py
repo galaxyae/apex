@@ -119,9 +119,17 @@ def uganda_new_mexico():
             'color':'green'
         },
         {
-            'time':'12:00',
+            'time':'15:00',
             'date':'01-08-2024 15:00',
             'airport':'Boooked Flight Scheduled for 05 August 2024 [DAR - DXB]'.upper(),
+            'is_error': False,
+            'status':'Booked',
+            'color':'green'
+        },
+        {
+            'time':'12:00',
+            'date':'05-08-2024 12:00',
+            'airport':'Shipment under sorting - Emirates Sorting Facility'.upper(),
             'is_error': False,
             'status':'Booked',
             'color':'green'
