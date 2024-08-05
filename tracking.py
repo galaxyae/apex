@@ -131,7 +131,7 @@ def uganda_new_mexico():
             'date':'05-08-2024 12:00',
             'airport':'Shipment under sorting - Emirates Sorting Facility'.upper(),
             'is_error': False,
-            'status':'Booked',
+            'status':'Processing',
             'color':'green'
         },
         # {
