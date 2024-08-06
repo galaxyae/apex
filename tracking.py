@@ -522,7 +522,7 @@ RAK, UAE.""".upper(),
 
     # check
     increment = 100 / len(checkpoints)
-    progress = .5
+    progress = 1.5
     return render_template('track.html', item="", ui="", shipment=product, has_arrived=has_arrived, has_arrived_message=has_arrived_message, sender=sender, has_shipped=has_shipped, shipping_message=shipping_message, product=transit, receiver=reciever, amount=len(transit), map = unique, lines = lines, source = locations[0]['country'].title(), checkpoints=checkpoints, checkpoints_length=len(checkpoints), increment=increment, progress=progress, error=error, flight_progress=flight_progress, arrival_time=arrival_time, shipment_error=shipment_error)
 
 def uganda_italy():
