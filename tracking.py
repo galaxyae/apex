@@ -82,16 +82,16 @@ def uganda_new_mexico():
     transit = [
         {
             'current':'Dar es Salaam, Julius Nyerere International Airport [DAR] - Dubai, Dubai International Airport [DXB]'.upper(),#' - Dubai International Airport [DXB]',
-            'departure':'Emirates, EK 0726 → Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB] 05-08-2024 03:25 [ Duration 5h15m ]',
-            'arrival':'Emirates, EK 0726 → ETA Dubai, Dubai International Airport [DXB] 20-04-2023 10:50 PM',
+            'departure':'Emirates, EK 0726 → Dar es Salaam, Julius Nyerere International Airport [DAR] - Dubai, Dubai International Airport [DXB] 05-08-2024 03:25 [ Duration 5h15m ]',
+            'arrival':'Emirates, EK 0726 → ETA Dubai, Dubai International Airport [DXB] 05-08-2024 21:50',
             'comment': 'Processed'
         },
-        # {
-        #     'current':'Dubai, Dubai International Airport [DXB] - San Francisco International Airport [SFO]'.upper(),#' - Dubai International Airport [DXB]',
-        #     'departure':'Emirates, EK 0225 → Dubai, Dubai International Airport [DXB] - San Francisco International Airport [SFO] 02-01-2022 08:45 [ Duration 14h15m ]',
-        #     'arrival':'Emirates, EK 0225 → ETA San Francisco International Airport [SFO] 02-01-2022 23:00',
-        #     'comment': 'The shipment queried and discharged, shipper notification forwarded for follow up'
-        # },
+        {
+            'current':'Dubai, Dubai International Airport [DXB] - San Francisco International Airport [SFO]'.upper(),#' - Dubai International Airport [DXB]',
+            'departure':'Emirates, EK 0225 → Dubai, Dubai International Airport [DXB] - San Francisco International Airport [SFO] 08-08-2024 09:10',
+            'arrival':'Emirates, EK 0225 → ETA San Francisco International Airport [SFO] 08-08-2024 14:00',
+            'comment': 'Awaiting Departure'
+        },
         # {
         #     'current':'San Francisco International Airport [SFO] - Phoenix Sky Harbor International Airport [PHX]'.upper(),#' - Dubai International Airport [DXB]',
         #     'departure':'Emirates, QJ 1728 → San Francisco International Airport [SFO] - Phoenix Sky Harbor International Airport [PHX] 03-01-2022 12:45 [ Duration 45h15m ]',
@@ -288,9 +288,9 @@ def uganda_new_mexico():
 
     # check
     increment = 100 / len(checkpoints)
-    progress = 1
-    transit_title = "Booked - Awaiting Departure"
-    return render_template('track.html',transit_title=transit_title, item="", ui="", shipment=product, has_arrived=has_arrived, has_arrived_message=has_arrived_message, sender=sender, has_shipped=has_shipped, shipping_message=shipping_message, product=transit, receiver=reciever, amount=len(transit), map = unique, lines = lines, source = locations[0]['country'].title(), checkpoints=checkpoints, checkpoints_length=len(checkpoints), increment=increment, progress=progress, error=error, flight_progress=flight_progress, arrival_time=arrival_time, shipment_error=shipment_error)
+    progress = .8
+    transit_title = ""
+    return render_template('track.html', item="", ui="", shipment=product, has_arrived=has_arrived, has_arrived_message=has_arrived_message, sender=sender, has_shipped=has_shipped, shipping_message=shipping_message, product=transit, receiver=reciever, amount=len(transit), map = unique, lines = lines, source = locations[0]['country'].title(), checkpoints=checkpoints, checkpoints_length=len(checkpoints), increment=increment, progress=progress, error=error, flight_progress=flight_progress, arrival_time=arrival_time, shipment_error=shipment_error)
 
 
 def uganda_uae():
