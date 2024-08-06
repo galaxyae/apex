@@ -150,6 +150,22 @@ def uganda_new_mexico():
             'status':'EK 0726 - Departed',
             'color':'green'
         },
+        {
+            'time':'21:10',
+            'date':'05-08-2024 21:10',
+            'airport':'Arrived at Dubai International Airport [DXB]'.upper(),
+            'is_error': False,
+            'status':'Arrived',
+            'color':'green'
+        },
+        {
+            'time':'21:10',
+            'date':'05-08-2024 21:10',
+            'airport':'Arrived at Dubai International Airport [DXB]'.upper(),
+            'is_error': False,
+            'status':'Shipment Under Review',
+            'color':'orange'
+        },
         # {
         #     'time':'16:25',
         #     'date':'21-04-2023 16:25',
