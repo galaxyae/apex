@@ -163,7 +163,7 @@ def uganda_new_mexico():
             'date':'05-08-2024 21:10',
             'airport':'Arrived at Dubai International Airport [DXB]'.upper(),
             'is_error': False,
-            'status':'Shipment Under Review',
+            'status':'Shipment On Hold - Document Query',
             'color':'orange'
         },
         # {
