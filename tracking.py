@@ -344,8 +344,9 @@ def nairobi_ist_dxb():
     sender = {
         'name':'APEX CAPITAL LOGISTICS',
         'address':"""
-                   PLOT 12, AIRPORT ROAD
-P.O BOX 72177, KAMPALA (U)
+                    P.O BOX 72177,
+                    KENYATTA AVENUE,
+                   NAIROBI, KENYA
                 """,
         'contact':'info@apexcapitallogistics.com'
     }
