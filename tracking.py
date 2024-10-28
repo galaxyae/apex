@@ -359,18 +359,24 @@ P.O BOX 72177, KAMPALA (U)
     }
 
     transit = [
-        {
-            'current': 'Nairobi, Jomo Kenyatta International Airport [NBO] - Istanbul Airport [IST] - Dubai International Airport [DXB]'.upper(),
-            'departure': 'Turkish Airlines, TK 6259 → Nairobi, Jomo Kenyatta International Airport [NBO] - Istanbul Airport [IST] 29-10-2024 04:05 [ Duration 7h15m ]',
-            'arrival': 'Turkish Airlines, TK 6259 → ETA Istanbul Airport [IST] 29-10-2024 11:20 AM',
-            'comment': 'Processed at departure'
-        },
-        {
-            'current': 'Istanbul Airport [IST] - Dubai International Airport [DXB]'.upper(),
-            'departure': 'Turkish Airlines, TK 0758 → Istanbul Airport [IST] - Dubai International Airport [DXB] 29-10-2024 21:45 [ Duration 5h25m ]',
-            'arrival': 'Turkish Airlines, TK 0758 → ETA Dubai International Airport [DXB] 30-10-2024 03:10 AM',
-            'comment': 'Processed at Istanbul'
-        }
+         {
+        'current': 'Awaiting Departure at Nairobi, Jomo Kenyatta International Airport [NBO]'.upper(),
+        'departure': 'Turkish Airlines, TK 6259 → Nairobi, Jomo Kenyatta International Airport [NBO] - Istanbul Airport [IST] 29-10-2024 04:05 [ Duration 7h15m ]',
+        'arrival': 'Scheduled Arrival at Istanbul Airport [IST] 29-10-2024 11:20 AM',
+        'comment': 'Awaiting departure'
+    },
+        # {
+        #     'current': 'Nairobi, Jomo Kenyatta International Airport [NBO] - Istanbul Airport [IST] - Dubai International Airport [DXB]'.upper(),
+        #     'departure': 'Turkish Airlines, TK 6259 → Nairobi, Jomo Kenyatta International Airport [NBO] - Istanbul Airport [IST] 29-10-2024 04:05 [ Duration 7h15m ]',
+        #     'arrival': 'Turkish Airlines, TK 6259 → ETA Istanbul Airport [IST] 29-10-2024 11:20 AM',
+        #     'comment': 'Processed at departure'
+        # },
+        # {
+        #     'current': 'Istanbul Airport [IST] - Dubai International Airport [DXB]'.upper(),
+        #     'departure': 'Turkish Airlines, TK 0758 → Istanbul Airport [IST] - Dubai International Airport [DXB] 29-10-2024 21:45 [ Duration 5h25m ]',
+        #     'arrival': 'Turkish Airlines, TK 0758 → ETA Dubai International Airport [DXB] 30-10-2024 03:10 AM',
+        #     'comment': 'Processed at Istanbul'
+        # }
     ]
 
 
