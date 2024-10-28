@@ -293,11 +293,15 @@ def uganda_new_mexico():
     return render_template('track.html', item="", ui="", shipment=product, has_arrived=has_arrived, has_arrived_message=has_arrived_message, sender=sender, has_shipped=has_shipped, shipping_message=shipping_message, product=transit, receiver=reciever, amount=len(transit), map = unique, lines = lines, source = locations[0]['country'].title(), checkpoints=checkpoints, checkpoints_length=len(checkpoints), increment=increment, progress=progress, error=error, flight_progress=flight_progress, arrival_time=arrival_time, shipment_error=shipment_error)
 
 
-def uganda_uae():
+def nairobi_ist_dxb():
     locations = [{
-            'country': 'Entebbe',
-            'code': 'UG',
-            'airport': 'EBB'
+            'country': 'Nairobi',
+            'code': 'KE',
+            'airport': 'NBO'
+        },{
+            'country': 'Istanbul',
+            'code': 'TR',
+            'airport': 'IST'
         },{
             'country': 'Dubai',
             'code': 'AE',
@@ -338,150 +342,91 @@ def uganda_uae():
             )
     print(lines)
     sender = {
-        'name':'New Crest Mining Limited',
+        'name':'APEX CAPITAL LOGISTICS',
         'address':"""
-                    PLOT 7, LOURDEL ROAD
-                    NAGURU - UGANDA
+                   PLOT 12, AIRPORT ROAD
+P.O BOX 72177, KAMPALA (U)
                 """,
-        'contact':'info@newcrestminingltd.com'
+        'contact':'info@apexcapitallogistics.com'
     }
 
 
     product = {
         'name':'Precious Minerals',
         'content':[
-            {'item': '1 Box(es) of GOLD AU BARS [20 KGs]'},
+            {'item': '1 Box(es) of GOLD AU BARS [07 KGs]'},
         ]
     }
 
     transit = [
         {
-            'current':'Dar es Salaam, Julius Nyerere International Airport [DAR] - Dubai, Dubai International Airport [DXB]'.upper(),#' - Dubai International Airport [DXB]',
-            'departure':'Emirates, EK 0726 → Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB] 05-08-2024 03:25 [ Duration 5h15m ]',
-            'arrival':'Emirates, EK 0726 → ETA Dubai, Dubai International Airport [DXB] 20-04-2023 10:50 PM',
-            'comment': 'Processed'
+            'current': 'Nairobi, Jomo Kenyatta International Airport [NBO] - Istanbul Airport [IST] - Dubai International Airport [DXB]'.upper(),
+            'departure': 'Turkish Airlines, TK 6259 → Nairobi, Jomo Kenyatta International Airport [NBO] - Istanbul Airport [IST] 29-10-2024 04:05 [ Duration 7h15m ]',
+            'arrival': 'Turkish Airlines, TK 6259 → ETA Istanbul Airport [IST] 29-10-2024 11:20 AM',
+            'comment': 'Processed at departure'
         },
-        # {
-        #     'current':'Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB]'.upper(),#' - Dubai International Airport [DXB]',
-        #     'departure':'Emirates, EK 0726 → Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB] 20-04-2023 04:25 [ Duration 5h15m ]',
-        #     'arrival':'Emirates, EK 0726 → ETA Dubai, Dubai International Airport [DXB] 20-04-2023 10:50 PM',
-        #     'comment': 'Processed'
-        # },
-        # {
-        #     'current':'Dubai, Dubai International Airport [DXB] - San Francisco International Airport [SFO]'.upper(),#' - Dubai International Airport [DXB]',
-        #     'departure':'Emirates, EK 0225 → Dubai, Dubai International Airport [DXB] - San Francisco International Airport [SFO] 02-01-2022 08:45 [ Duration 14h15m ]',
-        #     'arrival':'Emirates, EK 0225 → ETA San Francisco International Airport [SFO] 02-01-2022 23:00',
-        #     'comment': 'The shipment queried and discharged, shipper notification forwarded for follow up'
-        # },
-        # {
-        #     'current':'San Francisco International Airport [SFO] - Phoenix Sky Harbor International Airport [PHX]'.upper(),#' - Dubai International Airport [DXB]',
-        #     'departure':'Emirates, QJ 1728 → San Francisco International Airport [SFO] - Phoenix Sky Harbor International Airport [PHX] 03-01-2022 12:45 [ Duration 45h15m ]',
-        #     'arrival':'Emirates, QJ 1728 → ETA Phoenix Sky Harbor International Airport [PHX] 05-01-2022 10:00',
-        #     'comment': 'The shipment queried and discharged, shipper notification forwarded for follow up'
-        # },
+        {
+            'current': 'Istanbul Airport [IST] - Dubai International Airport [DXB]'.upper(),
+            'departure': 'Turkish Airlines, TK 0758 → Istanbul Airport [IST] - Dubai International Airport [DXB] 29-10-2024 21:45 [ Duration 5h25m ]',
+            'arrival': 'Turkish Airlines, TK 0758 → ETA Dubai International Airport [DXB] 30-10-2024 03:10 AM',
+            'comment': 'Processed at Istanbul'
+        }
     ]
 
+
     reciever = {
-        'name':'Asghar Hussain Agha Yawar Hussain',
-        'address':"""The Location Gold FZ-LLC
-EIB-501A
-Emirates Islamic Bank Building
-RAKEZ Business Zone-FZ
-RAK, UAE.""".upper(),
-        'contact':'+971 544 208651'
+        'name':'AURA ROYAL BULLION TRADING LLC',
+        'address':"""ROOM NO. 415, 4TH FLOOR.
+HIND PLAZA 5 A, GOLD SOUK
+DUBAI, UAE
++971 4385 8369
+arbbullion@gmail.com
+""".upper(),
+        'contact':'+971 4385 8369, arbbullion@gmail.com'
     }
     # Harry Reid International Airport (LAS)
     flight_progress = [
-        # {
-        #     'time':'12:00',
-        #     'date':'21-04-2023 12:00',
-        #     'airport':'Arrived at Apex Logistics Sorting Facility KAMPALA - UGANDA'.upper(),
-        #     'is_error': False,
-        #     'status':'Processed',
-        #     'color':'green'
-        # },
         {
-            'time':'13:00',
-            'date':'20-04-2024 13:00',
-            'airport':'Arrived at Entebbe, Entebbe International Airport [EBB]'.upper(),
-            'is_error': False,
-            'status':'EK 0730 - ETD 20-04-2024 04:25 PM | ETA 20-04-2024 22:50 PM',
-            'color':'green'
-        },
-        {
-            'time':'16:25',
-            'date':'20-04-2024 16:25',
-            'airport':'Entebbe, Entebbe International Airport [EBB]'.upper(),
-            'is_error': False,
-            'status':'EK0730 - Dispatched',
-            'color':'green'
-        },
-        {
-            'time':'10:50',
-            'date':'20-04-2024 10:50',
-            'airport':'Arrived at Dubai International Airport [DXB]'.upper(),
-            'is_error': False,
-            'status':'Processed',
-            'color':'green'
-        },
-        {
-            'time':'11:35',
-            'date':'27-04-2024 11:35',
-            'airport':'Goods delivered to receiver [DXB]'.upper(),
-            'is_error': False,
-            'status':'Delivered',
-            'color':'green'
-        },
-        #5h 10m
-        # {
-        #     'time':'22:40',
-        #     'date':'30-12-2021 22:40',
-        #     'airport':'Dubai, Dubai International Airport [DXB]'.upper(),
-        #     'is_error': False,
-        #     'status':'🛬 EK 0730 - Arrival',
-        #     'color':'green'
-        # },
-        # {
-        #     'time':'10:00',
-        #     'date':'31-12-2021 10:00',
-        #     'airport':'Error occurred processing shipment',
-        #     'is_error': True,
-        #     'status':'Action Required',
-        #     'color':'orange'
-        # },
-        # {
-        #     'time':'08:45',
-        #     'date':'02-01-2022 08:45',
-        #     'airport':'Dubai, Dubai International Airport [DXB]'.upper(),
-        #     'is_error': False,
-        #     'status':'🛫 EK 0225 - Departure',
-        #     'color':'default'
-        # },
-        # #1h 10m
-        # {
-        #     'time':'12:45',
-        #     'date':'02-01-2022 12:45',
-        #     'airport':'San Francisco International Airport [SFO]'.upper(),
-        #     'is_error': False,
-        #     'status':'🛬 EK 0225 - Arrival',
-        #     'color':'default'
-        # },
-        # {
-        #     'time':'23:00',
-        #     'date':'03-01-2022 23:00',
-        #     'airport':'San Francisco International Airport [SFO]'.upper(),
-        #     'is_error': False,
-        #     'status':'🚚 Departure → [Ground Shipping]',
-        #     'color':'default'
-        # },
-        # {
-        #     'time':'10:00',
-        #     'date':'05-01-2022 10:00',
-        #     'airport':'Phoenix Sky Harbor International Airport [PHX]'.upper(),
-        #     'is_error': False,
-        #     'status':'🚚 Arrival → [Ground Shipping]',
-        #     'color':'default'
-        # },
+        'time': '--:--',
+        'date': '28-10-2024 --:--',
+        'airport': 'Awaiting Departure at Nairobi, Jomo Kenyatta International Airport [NBO]'.upper(),
+        'is_error': False,
+        'status': 'TK 6259 - Scheduled for Departure on 29-10-2024 at 04:05 AM',
+        'color': 'orange'
+    },
+    #      {
+    #     'time': '04:05',
+    #     'date': '29-10-2024 04:05',
+    #     'airport': 'Departed from Nairobi, Jomo Kenyatta International Airport [NBO]'.upper(),
+    #     'is_error': False,
+    #     'status': 'TK 6259 - ETD 29-10-2024 04:05 AM | ETA 29-10-2024 11:20 AM at IST',
+    #     'color': 'green'
+    # },
+    # {
+    #     'time': '11:20',
+    #     'date': '29-10-2024 11:20',
+    #     'airport': 'Arrived at Istanbul Airport [IST]'.upper(),
+    #     'is_error': False,
+    #     'status': 'TK 6259 - Arrived at IST',
+    #     'color': 'green'
+    # },
+    # {
+    #     'time': '21:45',
+    #     'date': '29-10-2024 21:45',
+    #     'airport': 'Departed from Istanbul Airport [IST]'.upper(),
+    #     'is_error': False,
+    #     'status': 'TK 0758 - ETD 29-10-2024 09:45 PM | ETA 30-10-2024 03:10 AM at DXB',
+    #     'color': 'green'
+    # },
+    # {
+    #     'time': '03:10',
+    #     'date': '30-10-2024 03:10',
+    #     'airport': 'Arrived at Dubai International Airport [DXB]'.upper(),
+    #     'is_error': False,
+    #     'status': 'TK 0758 - Final Destination DXB',
+    #     'color': 'green'
+    # }
+        
     ]
 
     has_shipped = True
@@ -518,11 +463,11 @@ RAK, UAE.""".upper(),
 
     shipment_error = False
 
-    arrival_time = "Estimated time of arrival → 14 APRIL 2024 [Emirates]"
+    arrival_time = "Estimated time of arrival → 30 OCTOBER 2024 [Turkish Airlines]"
 
     # check
     increment = 100 / len(checkpoints)
-    progress = 1
+    progress = .0
     return render_template('track.html', item="", ui="", shipment=product, has_arrived=has_arrived, has_arrived_message=has_arrived_message, sender=sender, has_shipped=has_shipped, shipping_message=shipping_message, product=transit, receiver=reciever, amount=len(transit), map = unique, lines = lines, source = locations[0]['country'].title(), checkpoints=checkpoints, checkpoints_length=len(checkpoints), increment=increment, progress=progress, error=error, flight_progress=flight_progress, arrival_time=arrival_time, shipment_error=shipment_error)
 
 def uganda_italy():
