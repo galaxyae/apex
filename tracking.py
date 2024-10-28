@@ -360,7 +360,7 @@ P.O BOX 72177, KAMPALA (U)
 
     transit = [
          {
-        'current': 'Awaiting Departure at Nairobi, Jomo Kenyatta International Airport [NBO]'.upper(),
+        'current': 'Booked: Awaiting Departure at Nairobi, Jomo Kenyatta International Airport [NBO]'.upper(),
         'departure': 'Turkish Airlines, TK 6259 → Nairobi, Jomo Kenyatta International Airport [NBO] - Istanbul Airport [IST] 29-10-2024 04:05 [ Duration 7h15m ]',
         'arrival': 'Scheduled Arrival at Istanbul Airport [IST] 29-10-2024 11:20 AM',
         'comment': 'Awaiting departure'
@@ -395,7 +395,7 @@ arbbullion@gmail.com
         {
         'time': '--:--',
         'date': '28-10-2024 --:--',
-        'airport': 'Awaiting Departure at Nairobi, Jomo Kenyatta International Airport [NBO]'.upper(),
+        'airport': 'Booked: Awaiting Departure at Nairobi, Jomo Kenyatta International Airport [NBO]'.upper(),
         'is_error': False,
         'status': 'TK 6259 - Scheduled for Departure on 29-10-2024 at 04:05 AM',
         'color': 'orange'
