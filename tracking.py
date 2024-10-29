@@ -360,18 +360,12 @@ def nairobi_ist_dxb():
     }
 
     transit = [
-         {
-        'current': 'Booked: Awaiting Departure at Nairobi, Jomo Kenyatta International Airport [NBO]'.upper(),
-        'departure': 'Turkish Airlines, TK 6259 → Nairobi, Jomo Kenyatta International Airport [NBO] - Istanbul Airport [IST] 29-10-2024 04:05 [ Duration 7h15m ]',
-        'arrival': 'Scheduled Arrival at Istanbul Airport [IST] 29-10-2024 11:20 AM',
-        'comment': 'Awaiting departure'
-    },
-        # {
-        #     'current': 'Nairobi, Jomo Kenyatta International Airport [NBO] - Istanbul Airport [IST] - Dubai International Airport [DXB]'.upper(),
-        #     'departure': 'Turkish Airlines, TK 6259 → Nairobi, Jomo Kenyatta International Airport [NBO] - Istanbul Airport [IST] 29-10-2024 04:05 [ Duration 7h15m ]',
-        #     'arrival': 'Turkish Airlines, TK 6259 → ETA Istanbul Airport [IST] 29-10-2024 11:20 AM',
-        #     'comment': 'Processed at departure'
-        # },
+        {
+            'current': 'Nairobi, Jomo Kenyatta International Airport [NBO] - Istanbul Airport [IST] - Dubai International Airport [DXB]'.upper(),
+            'departure': 'Turkish Airlines, TK 6259 → Nairobi, Jomo Kenyatta International Airport [NBO] - Istanbul Airport [IST] 29-10-2024 04:05 [ Duration 7h15m ]',
+            'arrival': 'Turkish Airlines, TK 6259 → ETA Istanbul Airport [IST] 29-10-2024 11:20 AM',
+            'comment': 'Processed at departure'
+        },
         # {
         #     'current': 'Istanbul Airport [IST] - Dubai International Airport [DXB]'.upper(),
         #     'departure': 'Turkish Airlines, TK 0758 → Istanbul Airport [IST] - Dubai International Airport [DXB] 29-10-2024 21:45 [ Duration 5h25m ]',
@@ -393,30 +387,30 @@ arbbullion@gmail.com
     }
     # Harry Reid International Airport (LAS)
     flight_progress = [
-        {
-        'time': '--:--',
-        'date': '28-10-2024 --:--',
-        'airport': 'Booked: Awaiting Departure at Nairobi, Jomo Kenyatta International Airport [NBO]'.upper(),
+    #     {
+    #     'time': '--:--',
+    #     'date': '28-10-2024 --:--',
+    #     'airport': 'Booked: Awaiting Departure at Nairobi, Jomo Kenyatta International Airport [NBO]'.upper(),
+    #     'is_error': False,
+    #     'status': 'TK 6259 - Scheduled for Departure on 29-10-2024 at 04:05 AM',
+    #     'color': 'orange'
+    # },
+         {
+        'time': '04:05',
+        'date': '29-10-2024 04:05',
+        'airport': 'Departed from Nairobi, Jomo Kenyatta International Airport [NBO]'.upper(),
         'is_error': False,
-        'status': 'TK 6259 - Scheduled for Departure on 29-10-2024 at 04:05 AM',
-        'color': 'orange'
+        'status': 'TK 6259 - ETD 29-10-2024 04:05 AM | ETA 29-10-2024 11:20 AM at IST',
+        'color': 'green'
     },
-    #      {
-    #     'time': '04:05',
-    #     'date': '29-10-2024 04:05',
-    #     'airport': 'Departed from Nairobi, Jomo Kenyatta International Airport [NBO]'.upper(),
-    #     'is_error': False,
-    #     'status': 'TK 6259 - ETD 29-10-2024 04:05 AM | ETA 29-10-2024 11:20 AM at IST',
-    #     'color': 'green'
-    # },
-    # {
-    #     'time': '11:20',
-    #     'date': '29-10-2024 11:20',
-    #     'airport': 'Arrived at Istanbul Airport [IST]'.upper(),
-    #     'is_error': False,
-    #     'status': 'TK 6259 - Arrived at IST',
-    #     'color': 'green'
-    # },
+    {
+        'time': '11:20',
+        'date': '29-10-2024 11:20',
+        'airport': 'Arrived at Istanbul Airport [IST]'.upper(),
+        'is_error': False,
+        'status': 'TK 6259 - Arrived at IST',
+        'color': 'green'
+    },
     # {
     #     'time': '21:45',
     #     'date': '29-10-2024 21:45',
