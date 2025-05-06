@@ -1016,10 +1016,72 @@
             <div id="content" class="no-sidebar no-sidebar ">
                 <div id="post-575" class="page post-575 type-page status-publish hentry">
                     <article>
+                      {% with messages = get_flashed_messages(with_categories=true) %}
+                          {% if messages %}
+                              {% for category, message in messages %}
+                                  <div class="alert alert-{{ category }}">{{ message }}</div>
+                              {% endfor %}
+                          {% endif %}
+                      {% endwith %}
 
-
-                        <div class="post-content page-content">
-
+                      <style>
+                        header {
+                            text-align: center;
+                            margin-bottom: 20px;
+                            border-bottom: 2px solid #f0f0f0;
+                            padding-bottom: 10px;
+                        }
+                        h1 {
+                            color: #2c3e50;
+                            margin-bottom: 5px;
+                        }
+                        h2 {
+                            color: #3498db;
+                            border-bottom: 1px solid #eee;
+                            padding-bottom: 5px;
+                            margin-top: 25px;
+                        }
+                        .section {
+                            margin-bottom: 20px;
+                        }
+                        table {
+                            width: 100%;
+                            border-collapse: collapse;
+                            margin-bottom: 20px;
+                        }
+                        th, td {
+                            padding: 12px;
+                            text-align: left;
+                            border-bottom: 1px solid #ddd;
+                        }
+                        th {
+                            background-color: #171B26;
+                        }
+                        .item-status {
+                            display: inline-block;
+                            background-color: #27ae60;
+                            color: white;
+                            padding: 5px 10px;
+                            border-radius: 3px;
+                            font-weight: bold;
+                        }
+                        .tracking-code {
+                            font-family: monospace;
+                            background-color: #171B26;
+                            padding: 5px;
+                            border: 1px solid #ddd;
+                            border-radius: 3px;
+                        }
+                        footer {
+                            text-align: center;
+                            margin-top: 30px;
+                            font-size: 0.9em;
+                            color: #7f8c8d;
+                            border-top: 1px solid #eee;
+                            padding-top: 15px;
+                        }
+                    </style>
+                        
 
                             <div class="vc_row wpb_row vc_row-fluid vc_custom_1415742846793 vc_row-has-fill ozy-crfclr-569 ozy-custom-row parallax">
                                 <div class="parallax-wrapper">
@@ -1032,46 +1094,105 @@
                                                      style="border-top-style:solid;border-top-width:2px;border-top-color:#34ccff;width:40px;max-width:40px;margin:20px auto;"></div>
                                                 <div class="vc_row wpb_row vc_inner vc_row-fluid">
                                                     <div class="parallax-wrapper">
-                                                        <div class="wpb_column vc_column_container vc_col-sm-6">
+                                                        <div class="wpb_column vc_column_container vc_col-sm-12">
                                                             <div class="vc_column-inner">
                                                                 <div class="wpb_wrapper">
-                                                                    <table style="border: none; font-family: mada">
-                                                                        <tr>
-                                                                            <td><h3 style="font-family: 'Mada', sans-serif;">Client Name:</h3></td>
-                                                                            <td><p style="font-size: 18px">
-                                                                                {{details.name}}</p></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td><h3 style="font-family: 'Mada', sans-serif;">Client Type: </h3></td>
-                                                                            <td><p style="font-size: 18px">
-                                                                                {{details.ind}}</p></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td><h3 style="font-family: 'Mada', sans-serif;">Package Type:</h3></td>
-                                                                            <td><p style="font-size: 18px">
-                                                                                {{details.type}}</p></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td><h3 style="font-family: 'Mada', sans-serif;">Recieved On: </h3></td>
-                                                                            <td><p style="font-size: 18px">
-                                                                                {{details.storage_date}}</p></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td><h3 style="font-family: 'Mada', sans-serif;">Location: </h3></td>
-                                                                            <td><p style="font-size: 18px">
-                                                                                {{details.location}}</p></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td><h3 style="font-family: 'Mada', sans-serif;">Quantity: </h3></td>
-                                                                            <td><p style="font-size: 18px">
-                                                                                {{details.quantity}}</p></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td><h3 style="font-family: 'Mada', sans-serif;">Description: </h3></td>
-                                                                            <td><p style="font-size: 18px">
-                                                                                {{details.description}}</p></td>
-                                                                        </tr>
-                                                                    </table>
+                                                                  <div class="post-content page-content">
+                                                                    <div class="container wpb_wrapper">
+                                                                      <header>
+                                                                          <p>STORAGE ITEMS' SUMMARY</p>
+                                                                      </header>
+                                                              
+                                                                      <div class="tracking-summary">
+                                                                          <h2>Storage Item Found</h2>
+                                                                          <p>Details for tracking code: <span class="tracking-code">{{ data.tracking_code }}</span></p>
+                                                                      </div>
+                                                              
+                                                                      <section class="section">
+                                                                          <h2>Client Details</h2>
+                                                                          <table>
+                                                                              <tr>
+                                                                                  <th>Name</th>
+                                                                                  <td>{{ data.client_details.name }}</td>
+                                                                              </tr>
+                                                                              <tr>
+                                                                                  <th>Client ID</th>
+                                                                                  <td>{{ data.client_details.client_id }}</td>
+                                                                              </tr>
+                                                                              <tr>
+                                                                                  <th>Issue Date</th>
+                                                                                  <td>{{ data.client_details.date }}</td>
+                                                                              </tr>
+                                                                              <tr>
+                                                                                  <th>SKR Number</th>
+                                                                                  <td>{{ data.client_details.skr_number }}</td>
+                                                                              </tr>
+                                                                          </table>
+                                                                      </section>
+                                                              
+                                                                      <section class="section">
+                                                                          <h2>Storage Summary</h2>
+                                                                          <table>
+                                                                              <tr>
+                                                                                  <th>Weight</th>
+                                                                                  <td>{{ data.storage_summary.weight }}</td>
+                                                                              </tr>
+                                                                              <tr>
+                                                                                  <th>Location</th>
+                                                                                  <td>{{ data.storage_summary.location }}</td>
+                                                                              </tr>
+                                                                          </table>
+                                                                      </section>
+                                                              
+                                                                      <section class="section">
+                                                                          <h2>Storage Details</h2>
+                                                                          <table>
+                                                                              <tr>
+                                                                                  <th>Storage Date</th>
+                                                                                  <td>{{ data.storage_details.date }}</td>
+                                                                              </tr>
+                                                                              <tr>
+                                                                                  <th>Storage Item</th>
+                                                                                  <td>{{ data.storage_details.item }}</td>
+                                                                              </tr>
+                                                                              <tr>
+                                                                                  <th>Total Packages</th>
+                                                                                  <td>{{ data.storage_details.packages }}</td>
+                                                                              </tr>
+                                                                              <tr>
+                                                                                  <th>Gross Weight</th>
+                                                                                  <td>{{ data.storage_details.gross_weight }}</td>
+                                                                              </tr>
+                                                                              <tr>
+                                                                                  <th>Cubic Meters</th>
+                                                                                  <td>{{ data.storage_details.cubic_meters }}</td>
+                                                                              </tr>
+                                                                          </table>
+                                                                      </section>
+                                                              
+                                                                      <section class="section">
+                                                                          <h2>Item Description</h2>
+                                                                          <p>{{ data.item_description }}</p>
+                                                                          <p><strong>Status:</strong> <span class="item-status">{{ data.item_status }}</span></p>
+                                                                      </section>
+                                                              
+                                                                      <div class="certificate">
+                                                                          <p>Depositor certifies that the information provided shows the actual status and description of the goods stored
+                                                                              with Apex Capital Logistics, and that all particulars are true and correct.</p>
+                                                                      </div>
+                                                              
+                                                                      <a href="{{ url_for('index') }}" class="back-link">← Back to tracking page</a>
+                                                              
+                                                                      <footer>
+                                                                          <div>
+                                                                              <strong>{{ data.contact.company }}</strong><br>
+                                                                              Email: {{ data.contact.email }}<br>
+                                                                              Website: <a href="{{ data.contact.website }}">{{ data.contact.website }}</a><br>
+                                                                              Phone: {{ data.contact.phone1 }} / {{ data.contact.phone2 }}
+                                                                          </div>
+                                                                          <p>Updated Date: {{ data.client_details.date }}</p>
+                                                                      </footer>
+                                                                  </div>
                                                                     <p> For more information about your storage item, please contact us at <a href="mailto:info@apexcapitallogistics.com">info@apexcapitallogistics.com</a></p>
                                                                 </div>
                                                             </div>
@@ -1080,26 +1201,11 @@
                                                             <div class="vc_column-inner">
                                                                 <div class="wpb_wrapper">
                                                                     <div align="center" style="width: 200px; height: 200px;">
-                                                                        <img style="border-radius: 5%; width: 100%; height: 100%; object-fit: cover" src="{{details.image}}" alt="">
 
 
                                                                     </div>
                                                                     <div>
-                                                                        {% if details.ind == 'Company'%}
-                                                                        <h3 style="font-family: mada;">Signatory: <u>{{details.sign}}</u></h3>
-                                                                        <h3 style="font-family: 'mada'; font-weight: normal;">{{details.name}}</h3>
-                                                                        <h3 style="font-family: 'mada'; font-weight: normal;">{{details.email}}</h3>
-                                                                        {% elif id == 'ST711DA6FE751' %}
-                                                                        <h3 style="font-family: mada;">Depositor: <u>{{details.sign}} {{details.name}}</u></h3>
-                                                                        <h3 style="font-family: 'mada'; font-weight: normal;">℅ {{details.co}}</h3>
-                                                                        <h3 style="font-family: 'mada'; font-weight: normal;">{{details.email}}</h3>
-                                                                        {% else %}
-                                                                        <h3>{{details.name}}</h3>
-                                                                        {% endif %}
-                                                                        <h3 style="font-weight: normal; font-family: Mada, monaco, monospace">ID: {{details.cid}}</h3>
-                                                                        {% if details.ind == 'Company'%}
-                                                                        <h3 style="font-weight: bold; font-family: Mada, monaco, monospace">c/o: {{details.ceo}} - {{details.co}}</h3>
-                                                                        {% endif %}
+                                                                        
                                                                     </div>
 
                                                                 </div>
@@ -1172,7 +1278,7 @@
                     <section class="widget-area">
                         <div class="widget"><h4>CONTACT INFO</h4><span class="line"></span>
                             <div class="textwidget">Address : Kampala, Uganda.<br>Phone
-                                Number : +256714364143
+                                Number : +256 701 351 387
                             </div>
                         </div>
                         <div class="widget"><h4>NEWSLETTER</h4><span class="line"></span>

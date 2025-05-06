@@ -1,0 +1,32 @@
+{
+  "STBFE2BC75DAF": {
+    "client_details": {
+      "name": "ALMOHEN TRADE LIMITED and LABEATALY UK LTD",
+      "client_id": "f3f79aac-0329-47f8-83f7-3723b53f6d0e",
+      "date": "16th February 2025",
+      "skr_number": "0012847"
+    },
+    "storage_summary": {
+      "weight": "1,300 Kgs",
+      "location": "Kampala, Uganda",
+      "items": "Gold (AU) Bars"
+    },
+    "storage_details": {
+      "date": "16th February 2025",
+      "item": "Gold (AU) Bars",
+      "packages": "10 Packages",
+      "gross_weight": "1,320 kg of Gold (AU) Bars and Packaging",
+      "cubic_meters": "N/A"
+    },
+    "item_description": "1,300 kgs of Gold (AU) Bars from ALMOHEN TRADE LIMITED and LABEATALY UK LTD stored in bonded warehouse 154351 in Kampala, Uganda",
+    "item_status": "Storage",
+    "tracking_code": "STBFE2BC75DAF",
+    "contact": {
+      "company": "APEX CAPITAL LOGISTICS",
+      "email": "info@apexcapitallogistics.com",
+      "website": "https://www.apexcapitallogistics.com",
+      "phone1": "+256 701 351 387",
+      "phone2": "+256 769 570 791"
+    }
+  }
+}

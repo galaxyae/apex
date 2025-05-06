@@ -1,4 +1,5 @@
-from flask import Flask, jsonify, render_template, redirect, url_for
+import os
+from flask import Flask, flash, jsonify, render_template, redirect, url_for
 import json, requests
 import urllib.request
 from flask import request
@@ -7,7 +8,15 @@ import tracking as track
 
 app = Flask(__name__)
 
-host = "https://apexcapitallogistics.com"
+host = "http://127.0.0.1:5000"
+
+DATA_FILE = 'storage_data.json'
+
+def load_storage_data():
+    """Load storage data from JSON file"""
+    if os.path.exists(DATA_FILE):
+        with open(DATA_FILE, 'r') as f:
+            return json.load(f)
 
 @app.route('/')
 def index():
@@ -32,7 +41,7 @@ def index():
 def sample():
     url = f"{host}/9108443e3e2b035c0e167594a63ff2fde9c9cea9"
     headers = {'User-Agent': 'Mozilla/5.0'}
-    payload = {'tracking':'ST948508TZ892'}
+    payload = {'tracking':'STBFE2BC75DAF'}
 
     session = requests.Session()
     page = session.post(url,headers=headers,data=payload).text
@@ -140,48 +149,64 @@ def custom_tracking_italy():
 def privacy():
     return render_template('privacypolicy.html')
 
+
 @app.route('/9108443e3e2b035c0e167594a63ff2fde9c9cea9', methods=['GET', 'POST'])
 def track_id():
     try:
-        data = request.form['tracking']
-        if data.lower() == "7e8443e3e2b07d".lower():
-            return redirect(url_for('app.storage_220'))
-        if "ST".lower() in data.lower():
-            items = {
-                    'ST948508TZ892':
-                    {'id': data, 'co':'PALUKU NATHANAEL','name': 'COOMIBEL','ind':'Company','type': 'Precious Metal (AU)', 'storage_date': '28 Apr 2023 11:30', 'location': 'Kampala, Uganda',
-                               'quantity': '500 kg [1102.31 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '500 kg Dore Bars\n 97% Purity', 'image': f'{host}/static/profile.jpg'},
-                    'ST711DA610991':
-                    {'id': data, 'co':'PALUKU NATHANAEL','name': 'COOMIBEL','ind':'Company','type': 'Precious Metal (AU)', 'storage_date': '12 Jun 2023 14:30', 'location': 'Kampala, Uganda',
-                               'quantity': '5000 kg [11023.11 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '5000 kg Dore Bars\n 97% Purity', 'image': f'{host}/static/profile.jpg'},
-                    'ST711DA61D991':
-                    {'id': data, 'co':'ELLY KALEKWA','name': 'ELLY KALEKWA','ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': '16 May 2023 14:30', 'location': 'Kampala, Uganda',
-                               'quantity': '100 kg [220.46 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '100 kg Dore Bars\n 97% Purity', 'image': f'{host}/static/profile.jpg'},
-                    'ST711DA6FE751':
-                    {'id': data, 'co':'Dr Wilson Chidozie Nwankwo'.upper(),'name': 'SAM OCOM','ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': '17 March 2023 14:30', 'location': 'Kampala, Uganda',
-                               'quantity': '1000 kg [2204.62 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '10 Metallic boxes containing 1000 kg Dore Bars\n 97% Purity', 'image': f'{host}/static/profile.jpg'},
-                    'ST948508TB899':
-                    {'id': data, 'co':'ILUNGA KITOMBOLWA KARIM & Khidasheli David'.upper(),'name': 'ILUNGA KITOMBOLWA KARIM & Khidasheli David'.upper(),'ind':'Individual - Joint Custody','type': 'Precious Metal (AU)', 'storage_date': '10 June 2024 09:22', 'location': 'Kampala, Uganda',
-                               'quantity': '2865 KG Nuggets and 135 KG Gold Bars', 'cid':'3e2b035c0e167594a63f', 'description': '2865 KG Nuggets and 135 KG Gold Bars\n ~96.5% Purity', 'image': f'{host}/static/profile.jpg'},
-                    'ST948508TF89E':
-                    {'id': data, 'co':' Paluku Nathani'.upper(),'name': ' Paluku Nathani'.upper(),'ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': '14 July 2024 09:22', 'location': 'Kampala, Uganda',
-                               'quantity': '2000 KG', 'cid':'3e2b035c0e167594a63f', 'description': '2000 KG Gold Bars\n ~96.5% Purity', 'image': f'{host}/static/profile.jpg'},
-                    }
-            keys = list(items.keys())
-            if data.lower() in [i.lower() for i in keys]:
-                return render_template('storage.html', id=data, details=items[data])
-        # elif "TR" in data and data == 'TR344053A77D4':
-        #     return track.uganda_new_mexico()
-        # elif "TR" in data and data == 'TR8711DA61099':
-        #     return track.uganda_uae()
-        elif "TR" in data and data == 'TR29973784':
-            return track.nairobi_ist_dxb()
-        elif "TR" in data and data == 'TR871153A778E':
-            return track.uganda_new_mexico()
-        elif "176" in data and data == '176-33858982':
-            return track.uganda_italy()
-        else:
+        tracking_code = request.form['tracking']
+        
+    
+        if not tracking_code:
+            flash('Please enter a tracking code', 'error')
             return redirect(url_for('index'))
+        
+        storage_data = load_storage_data()
+        
+        if tracking_code in storage_data:
+            return render_template('storage.html', data=storage_data[tracking_code])
+        else:
+            flash(f'No storage item found with tracking code: {tracking_code}', 'error')
+            return redirect(url_for('index'))
+
+        # data = request.form['tracking']
+        # if data.lower() == "7e8443e3e2b07d".lower():
+        #     return redirect(url_for('app.storage_220'))
+        # if "ST".lower() in data.lower():
+        #     items = {
+        #             'ST948508TZ892':
+        #             {'id': data, 'co':'PALUKU NATHANAEL','name': 'COOMIBEL','ind':'Company','type': 'Precious Metal (AU)', 'storage_date': '28 Apr 2023 11:30', 'location': 'Kampala, Uganda',
+        #                        'quantity': '500 kg [1102.31 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '500 kg Dore Bars\n 97% Purity', 'image': f'{host}/static/profile.jpg'},
+        #             'ST711DA610991':
+        #             {'id': data, 'co':'PALUKU NATHANAEL','name': 'COOMIBEL','ind':'Company','type': 'Precious Metal (AU)', 'storage_date': '12 Jun 2023 14:30', 'location': 'Kampala, Uganda',
+        #                        'quantity': '5000 kg [11023.11 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '5000 kg Dore Bars\n 97% Purity', 'image': f'{host}/static/profile.jpg'},
+        #             'ST711DA61D991':
+        #             {'id': data, 'co':'ELLY KALEKWA','name': 'ELLY KALEKWA','ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': '16 May 2023 14:30', 'location': 'Kampala, Uganda',
+        #                        'quantity': '100 kg [220.46 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '100 kg Dore Bars\n 97% Purity', 'image': f'{host}/static/profile.jpg'},
+        #             'ST711DA6FE751':
+        #             {'id': data, 'co':'Dr Wilson Chidozie Nwankwo'.upper(),'name': 'SAM OCOM','ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': '17 March 2023 14:30', 'location': 'Kampala, Uganda',
+        #                        'quantity': '1000 kg [2204.62 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '10 Metallic boxes containing 1000 kg Dore Bars\n 97% Purity', 'image': f'{host}/static/profile.jpg'},
+        #             'ST948508TB899':
+        #             {'id': data, 'co':'ILUNGA KITOMBOLWA KARIM & Khidasheli David'.upper(),'name': 'ILUNGA KITOMBOLWA KARIM & Khidasheli David'.upper(),'ind':'Individual - Joint Custody','type': 'Precious Metal (AU)', 'storage_date': '10 June 2024 09:22', 'location': 'Kampala, Uganda',
+        #                        'quantity': '2865 KG Nuggets and 135 KG Gold Bars', 'cid':'3e2b035c0e167594a63f', 'description': '2865 KG Nuggets and 135 KG Gold Bars\n ~96.5% Purity', 'image': f'{host}/static/profile.jpg'},
+        #             'ST948508TF89E':
+        #             {'id': data, 'co':' Paluku Nathani'.upper(),'name': ' Paluku Nathani'.upper(),'ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': '14 July 2024 09:22', 'location': 'Kampala, Uganda',
+        #                        'quantity': '2000 KG', 'cid':'3e2b035c0e167594a63f', 'description': '2000 KG Gold Bars\n ~96.5% Purity', 'image': f'{host}/static/profile.jpg'},
+        #             }
+        #     keys = list(items.keys())
+        #     if data.lower() in [i.lower() for i in keys]:
+        #         return render_template('storage.html', id=data, data=storage_data, details=items[data])
+        # # elif "TR" in data and data == 'TR344053A77D4':
+        # #     return track.uganda_new_mexico()
+        # # elif "TR" in data and data == 'TR8711DA61099':
+        # #     return track.uganda_uae()
+        # elif "TR" in data and data == 'TR29973784':
+        #     return track.nairobi_ist_dxb()
+        # elif "TR" in data and data == 'TR871153A778E':
+        #     return track.uganda_new_mexico()
+        # elif "176" in data and data == '176-33858982':
+        #     return track.uganda_italy()
+        # else:
+        #     return redirect(url_for('index'))
     except Exception as e:
         print(e)
         return redirect(url_for('index'))
