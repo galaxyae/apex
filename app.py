@@ -8,7 +8,7 @@ import tracking as track
 
 app = Flask(__name__)
 
-host = "http://127.0.0.1:5000"
+host = "https://apexcapitallogistics.com"
 
 DATA_FILE = 'storage_data.json'
 
