@@ -161,6 +161,14 @@ def track_id():
             return redirect(url_for('index'))
         
         storage_data = load_storage_data()
+
+        data = request.form['tracking']
+        if "TR" in data and data == 'TR29973784':
+            return track.nairobi_ist_dxb()
+        elif "TR" in data and data == 'TR871153A778E':
+            return track.uganda_new_mexico()
+        elif "176" in data and data == '176-33858982':
+            return track.uganda_italy()
         
         if tracking_code in storage_data:
             return render_template('storage.html', data=storage_data[tracking_code])
@@ -199,14 +207,8 @@ def track_id():
         # #     return track.uganda_new_mexico()
         # # elif "TR" in data and data == 'TR8711DA61099':
         # #     return track.uganda_uae()
-        # elif "TR" in data and data == 'TR29973784':
-        #     return track.nairobi_ist_dxb()
-        # elif "TR" in data and data == 'TR871153A778E':
-        #     return track.uganda_new_mexico()
-        # elif "176" in data and data == '176-33858982':
-        #     return track.uganda_italy()
-        # else:
-        #     return redirect(url_for('index'))
+        # el
+        
     except Exception as e:
         print(e)
         return redirect(url_for('index'))
