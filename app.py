@@ -180,7 +180,7 @@ def track_id():
             print("ST found in data")
             items = {
                     'ST711DA61D991':
-                    {'id': data, 'co':'CHRISTIAN LUSAGHI','name': 'CHRISTIAN LUSAGHI','ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': '27 July 2025 11:30', 'location': 'Kampala, Uganda',
+                    {'id': data, 'co':'CHRISTIAN LUSAGHI, MUGUEL AMISI H','name': 'CHRISTIAN LUSAGHI, MUGUEL AMISI H','ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': '27 July 2025 11:30', 'location': 'Kampala, Uganda',
                             'quantity': '100 kg [220.46 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '100 kg Dore Bars\n 96% Purity', 'image': f'{host}/static/profile.jpg'},
                     'ST711DA6FE751':
                     {'id': data, 'co':'Dr Wilson Chidozie Nwankwo'.upper(),'name': 'SAM OCOM','ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': '17 March 2023 14:30', 'location': 'Kampala, Uganda',
