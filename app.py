@@ -78,10 +78,10 @@ def one_thousand():
     return page
 
 @app.route('/fe7d1bfc-27e1-49dd-823a-6cea711224fa')
-def dr():
+def balibenge():
     url = f"{host}/9108443e3e2b035c0e167594a63ff2fde9c9cea9"
     headers = {'User-Agent': 'Mozilla/5.0'}
-    payload = {'tracking':'ST948508TB899'}
+    payload = {'tracking':'ST711DA6FE755'}
 
     session = requests.Session()
     page = session.post(url,headers=headers,data=payload).text
@@ -182,9 +182,9 @@ def track_id():
                     'ST711DA61D991':
                     {'id': data, 'co':'CHRISTIAN LUSAGHI, MUGUEL AMISI H','name': 'CHRISTIAN LUSAGHI, MUGUEL AMISI H','ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': '27 July 2025 11:30', 'location': 'Kampala, Uganda',
                             'quantity': '100 kg [220.46 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '100 kg Dore Bars\n 96% Purity', 'image': f'{host}/static/profile.jpg'},
-                    'ST711DA6FE751':
-                    {'id': data, 'co':'Dr Wilson Chidozie Nwankwo'.upper(),'name': 'SAM OCOM','ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': '17 March 2023 14:30', 'location': 'Kampala, Uganda',
-                            'quantity': '1000 kg [2204.62 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '10 Metallic boxes containing 1000 kg Dore Bars\n 97% Purity', 'image': f'{host}/static/profile.jpg'},
+                    'ST711DA6FE755':
+                    {'id': data, 'co':'BENOIT BALIBENGE'.upper(),'name': 'BENOIT BALIBENGE','ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': '27 August 2025 14:30', 'location': 'Kampala, Uganda',
+                            'quantity': '1004 kg [2213.4 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '10 Metallic boxes containing 1004 kg Dore Bars\n 97% Purity', 'image': f'{host}/static/profile.jpg'},
                     'ST948508TB899':
                     {'id': data, 'co':'ILUNGA KITOMBOLWA KARIM & Khidasheli David'.upper(),'name': 'ILUNGA KITOMBOLWA KARIM & Khidasheli David'.upper(),'ind':'Individual - Joint Custody','type': 'Precious Metal (AU)', 'storage_date': '10 June 2024 09:22', 'location': 'Kampala, Uganda',
                             'quantity': '2865 KG Nuggets and 135 KG Gold Bars', 'cid':'3e2b035c0e167594a63f', 'description': '2865 KG Nuggets and 135 KG Gold Bars\n ~96.5% Purity', 'image': f'{host}/static/profile.jpg'},
