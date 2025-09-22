@@ -41,7 +41,7 @@ def index():
 def sample():
     url = f"{host}/9108443e3e2b035c0e167594a63ff2fde9c9cea9"
     headers = {'User-Agent': 'Mozilla/5.0'}
-    payload = {'tracking':'STBFE2BC75DAF'}
+    payload = {'tracking':'ST711DA61D9FD'}
 
     session = requests.Session()
     page = session.post(url,headers=headers,data=payload).text
@@ -179,6 +179,9 @@ def track_id():
         if "ST".lower() in data.lower():
             print("ST found in data")
             items = {
+                    'ST711DA61D9FD':
+                    {'id': data, 'co':'MIGUEL AMISI MOHAMMED','name': 'MIGUEL AMISI MOHAMMED','ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': '19 August 2025 11:30', 'location': 'Kampala, Uganda',
+                            'quantity': '400 kg [881.85 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '400 kg Dore Bars\n 96% Purity', 'image': f'{host}/static/profile.jpg'},
                     'ST711DA61D991':
                     {'id': data, 'co':'CHRISTIAN LUSAGHI, MUGUEL AMISI H','name': 'CHRISTIAN LUSAGHI, MUGUEL AMISI H','ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': '27 July 2025 11:30', 'location': 'Kampala, Uganda',
                             'quantity': '100 kg [220.46 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '100 kg Dore Bars\n 96% Purity', 'image': f'{host}/static/profile.jpg'},
