@@ -191,7 +191,7 @@ def track_id():
             items = {
                         'ST948508TE755':
                         {'id': data, 'co':'MR. SANG H LEE & MR. TAE C PARK','name': 'MR. SANG H LEE & MR. TAE C PARK','ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': ' 23 December 2024 11:30', 'location': 'Kampala, Uganda',
-                                'quantity': '270 kg', 'cid':'3e2b035c0e76548a65a', 'description': '270 kg Dore Nuggets\n 96% Purity', 'image': f'{host}/static/profile.jpg'},
+                                'quantity': '270 kg', 'cid':'3e2b035c0e76548a65a', 'description': '270 kg Dore Bars\n 96% Purity', 'image': f'{host}/static/profile.jpg'},
                         'ST711DA61D9FD':
                         {'id': data, 'co':'MIGUEL AMISI MOHAMMED','name': 'MIGUEL AMISI MOHAMMED','ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': '19 August 2025 11:30', 'location': 'Kampala, Uganda',
                                 'quantity': '400 kg [881.85 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '400 kg Dore Nuggets\n 96% Purity', 'image': f'{host}/static/profile.jpg'},
