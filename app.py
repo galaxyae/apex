@@ -64,8 +64,31 @@ def sample270():
     payload = {'tracking':'ST948508TE755'}
 
     session = requests.Session()
-    page = session.post(url,headers=headers,data=payload).text
+    page = session.post(url, headers=headers, data=payload).text
     return page
+
+
+@app.route('/c3d15a1f-5e4a-44a8-9ad9-1b27f1ce1a56')
+def sample756():
+    url = f"{host}/9108443e3e2b035c0e167594a63ff2fde9c9cea9"
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    payload = {'tracking':'ST948508TE756'}
+
+    session = requests.Session()
+    page = session.post(url, headers=headers, data=payload).text
+    return page
+
+
+@app.route('/a95b72c3-99c4-42e5-a5f9-96730d5f9a1b')
+def sample757():
+    url = f"{host}/9108443e3e2b035c0e167594a63ff2fde9c9cea9"
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    payload = {'tracking':'ST948508TE757'}
+
+    session = requests.Session()
+    page = session.post(url, headers=headers, data=payload).text
+    return page
+
 
 @app.route('/fe7d1bfc-2751-49dd-823a-6cea6887d8f2')
 def five_thousand():
@@ -189,10 +212,48 @@ def track_id():
         if "ST".lower() in data.lower():
             print("ST found in data")
             items = {
-                        'ST948508TE755':
-                        {'id': data, 'co':'MR. SANG H LEE & MR. TAE C PARK','name': 'MR. SANG H LEE & MR. TAE C PARK','ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': ' 23 December 2024 11:30', 'location': 'Kampala, Uganda',
-                                'quantity': '270 kg', 'cid':'3e2b035c0e76548a65a', 'description': '270 kg Dore Bars\n 96% Purity', 'image': f'{host}/static/profile.jpg'},
-                        'ST711DA61D9FD':
+                        'ST948508TE755': {
+    'id': data,
+    'co': 'MR. SANG H LEE & MR. TAE C PARK',
+    'name': 'MR. SANG H LEE & MR. TAE C PARK',
+    'ind': 'Individual',
+    'type': 'Precious Metal (AU)',
+    'storage_date': '23 December 2024 11:30',
+    'location': 'Kampala, Uganda',
+    'quantity': '270 kg',
+    'cid': '3e2b035c0e76548a65a',
+    'description': '270 kg Dore Bars\n96% Purity',
+    'image': f'{host}/static/profile.jpg'
+},
+
+'ST948508TE756': {
+    'id': data,
+    'co': 'MR. ELLY KALEKWA & REV. PAUL KOFI DZANI',
+    'name': 'MR. ELLY KALEKWA & REV. PAUL KOFI DZANI',
+    'ind': 'Individual',
+    'type': 'Precious Metal (AU)',
+    'storage_date': '3 October 2025',
+    'location': 'Kampala, Uganda',
+    'quantity': '110,000 kg',
+    'cid': 'b54fd83ce4b11a2984c',
+    'description': 'SKR - 110,000 kgs total\n100,000 kgs in Nuggets\n10,000 kgs in 1 kg Bars\nArrived 3rd October 2025',
+    'image': f'{host}/static/profile.jpg'
+},
+
+'ST948508TE757': {
+    'id': data,
+    'co': 'MR. ELLY KALEKWA & REV. PAUL KOFI DZANI',
+    'name': 'MR. ELLY KALEKWA & REV. PAUL KOFI DZANI',
+    'ind': 'Individual',
+    'type': 'Precious Metal (AU)',
+    'storage_date': '7 October 2025',
+    'location': 'Kampala, Uganda',
+    'quantity': '2,000 kg',
+    'cid': 'a29dcfbf72a21e83e5b',
+    'description': 'SKR - 2,000 kgs total\n1,000 kgs in Nuggets\n1,000 kgs in Bars\nArrived 7th October 2025',
+    'image': f'{host}/static/profile.jpg'
+},
+'ST711DA61D9FD':
                         {'id': data, 'co':'MIGUEL AMISI MOHAMMED','name': 'MIGUEL AMISI MOHAMMED','ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': '19 August 2025 11:30', 'location': 'Kampala, Uganda',
                                 'quantity': '400 kg [881.85 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '400 kg Dore Nuggets\n 96% Purity', 'image': f'{host}/static/profile.jpg'},
                         'ST711DA61D991':
