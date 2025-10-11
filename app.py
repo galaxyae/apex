@@ -89,6 +89,16 @@ def sample757():
     page = session.post(url, headers=headers, data=payload).text
     return page
 
+@app.route('/d71c49b3-42fa-45ef-bac5-5e1d376f438b')
+def sample758():
+    url = f"{host}/9108443e3e2b035c0e167594a63ff2fde9c9cea9"
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    payload = {'tracking':'ST948508TE758'}
+
+    session = requests.Session()
+    page = session.post(url, headers=headers, data=payload).text
+    return page
+
 
 @app.route('/fe7d1bfc-2751-49dd-823a-6cea6887d8f2')
 def five_thousand():
@@ -237,6 +247,20 @@ def track_id():
     'quantity': '110,000 kg',
     'cid': 'b54fd83ce4b11a2984c',
     'description': 'SKR - 110,000 kgs total\n100,000 kgs in Nuggets\n10,000 kgs in 1 kg Bars\nArrived 3rd October 2025',
+    'image': f'{host}/static/profile.jpg'
+},
+
+'ST948508TE758': {
+    'id': data,
+    'co': 'MR. MIGUEL AMISI MOHAMMED',
+    'name': 'MR. MIGUEL AMISI MOHAMMED',
+    'ind': 'Individual',
+    'type': 'Precious Metal (AU)',
+    'storage_date': '21 August 2025',
+    'location': 'Kampala, Uganda',
+    'quantity': '250 kg',
+    'cid': 'cb57e8e3a65f42d7a1b',
+    'description': 'SKR - 250 kgs Bars\nArrived 21st August 2025',
     'image': f'{host}/static/profile.jpg'
 },
 
