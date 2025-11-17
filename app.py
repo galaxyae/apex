@@ -187,6 +187,16 @@ def custom_tracking_italy():
     page = session.post(url,headers=headers,data=payload).text
     return page
 
+@app.route('/f3b2aee1-7b4c-46f0-8a99-6b5b348ff91f')
+def sample759():
+    url = f"{host}/9108443e3e2b035c0e167594a63ff2fde9c9cea9"
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    payload = {'tracking':'ST948508TE759'}
+
+    session = requests.Session()
+    page = session.post(url, headers=headers, data=payload).text
+    return page
+
 
 @app.route('/privacy')
 def privacy():
@@ -277,6 +287,20 @@ def track_id():
     'description': 'SKR - 2,000 kgs total\n1,000 kgs in Nuggets\n1,000 kgs in Bars\nArrived 7th October 2025',
     'image': f'{host}/static/profile.jpg'
 },
+
+'ST948508TE759': {
+    'id': data,
+    'co': 'BENOIT BALIBENGE',
+    'name': 'BENOIT BALIBENGE',
+    'ind': 'Individual',
+    'type': 'Precious Metal (AU)',
+    'storage_date': '14th November 2025',
+    'location': 'Kampala, Uganda',
+    'quantity': '500 kg',
+    'cid': 'e8f2739bd1a54cfd92b1',
+    'description': 'SKR - 500 kgs total\nAll in Nuggets\nArrived 14th November 2025',
+    'image': f'{host}/static/profile.jpg'
+},
 'ST711DA61D9FD':
                         {'id': data, 'co':'MIGUEL AMISI MOHAMMED','name': 'MIGUEL AMISI MOHAMMED','ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': '19 August 2025 11:30', 'location': 'Kampala, Uganda',
                                 'quantity': '400 kg [881.85 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '400 kg Dore Nuggets\n 96% Purity', 'image': f'{host}/static/profile.jpg'},
@@ -285,11 +309,8 @@ def track_id():
                                 'quantity': '100 kg [220.46 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '100 kg Dore Bars\n 96% Purity', 'image': f'{host}/static/profile.jpg'},
                         'ST711DA6FE755':
                         {'id': data, 'co':'BENOIT BALIBENGE'.upper(),'name': 'BENOIT BALIBENGE','ind':'Individual','type': 'Precious Metal (AU)', 'storage_date': '27 August 2025 14:30', 'location': 'Kampala, Uganda',
-                                'quantity': '1004 kg [2213.4 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '10 Metallic boxes containing 1004 kg Dore Bars\n 97% Purity', 'image': f'{host}/static/profile.jpg'},
-                        'ST948508TB899':
-                        {'id': data, 'co':'ILUNGA KITOMBOLWA KARIM & Khidasheli David'.upper(),'name': 'ILUNGA KITOMBOLWA KARIM & Khidasheli David'.upper(),'ind':'Individual - Joint Custody','type': 'Precious Metal (AU)', 'storage_date': '10 June 2024 09:22', 'location': 'Kampala, Uganda',
-                                'quantity': '2865 KG Nuggets and 135 KG Gold Bars', 'cid':'3e2b035c0e167594a63f', 'description': '2865 KG Nuggets and 135 KG Gold Bars\n ~96.5% Purity', 'image': f'{host}/static/profile.jpg'},
-                        }
+                                'quantity': '1004 kg [2213.4 lbs]', 'cid':'3e2b035c0e167594a63f', 'description': '10 Metallic boxes containing 1004 kg Dore Bars\n 97% Purity', 'image': f'{host}/static/profile.jpg'},}
+                        
             keys = list(items.keys())
             if data.lower() in [i.lower() for i in keys]:
                 return render_template('storage..html', id=data, data=storage_data, details=items[data])
