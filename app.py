@@ -196,7 +196,16 @@ def sample759():
     session = requests.Session()
     page = session.post(url, headers=headers, data=payload).text
     return page
+    
+@app.route('/c9a14df2-3e8b-51g1-9b22-7c6c459gg02g')
+def sample760():
+    url = f"{host}/9108443e3e2b035c0e167594a63ff2fde9c9cea9"
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    payload = {'tracking':'ST94850855756'}
 
+    session = requests.Session()
+    page = session.post(url, headers=headers, data=payload).text
+    return page
 
 @app.route('/privacy')
 def privacy():
@@ -257,6 +266,20 @@ def track_id():
     'quantity': '110,000 kg',
     'cid': 'b54fd83ce4b11a2984c',
     'description': 'SKR - 110,000 kgs total\n100,000 kgs in Nuggets\n10,000 kgs in 1 kg Bars\nArrived 3rd October 2025',
+    'image': f'{host}/static/profile.jpg'
+},
+
+'ST94850855756': {
+    'id': data,
+    'co': 'MR. ELLY KALEKWA',
+    'name': 'MR. ELLY KALEKWA',
+    'ind': 'Individual',
+    'type': 'Precious Metal (AU)',
+    'storage_date': '2 May 2026',
+    'location': 'Kampala, Uganda',
+    'quantity': '2,350 kg',
+    'cid': 'b54fd83ce4b11a2984c',
+    'description': 'SKR - 2,350 kgs total\nArrived 2nd May 2026',
     'image': f'{host}/static/profile.jpg'
 },
 
