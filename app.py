@@ -277,9 +277,9 @@ def track_id():
     'type': 'Precious Metal (AU)',
     'storage_date': '2 May 2026',
     'location': 'Kampala, Uganda',
-    'quantity': '2,350 kg',
+    'quantity': '7,000 kg',
     'cid': 'b54fd83ce4b11a2984c',
-    'description': 'SKR - 2,350 kgs total\nArrived 2nd May 2026',
+    'description': 'SKR - 7,000 kgs total\nArrived 2nd May 2026',
     'image': f'{host}/static/profile.jpg'
 },
 
