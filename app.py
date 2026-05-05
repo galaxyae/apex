@@ -196,8 +196,8 @@ def sample759():
     session = requests.Session()
     page = session.post(url, headers=headers, data=payload).text
     return page
-    
-@app.route('/c9a14df2-3e8b-51g1-9b22-7c6c459gg02g')
+
+@app.route('/c9a14df2-3e8b-41a1-9b22-7c6c459aa02a')
 def sample760():
     url = f"{host}/9108443e3e2b035c0e167594a63ff2fde9c9cea9"
     headers = {'User-Agent': 'Mozilla/5.0'}
