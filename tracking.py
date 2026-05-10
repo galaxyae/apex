@@ -394,27 +394,27 @@ def uganda_kor():
         'color': 'orange'
     },
     #      {
-    #     'time': '04:05',
-    #     'date': '29-10-2024 04:05',
-    #     'airport': 'Departed from Nairobi, Jomo Kenyatta International Airport [NBO]'.upper(),
+    #     'time': '16:35',
+    #     'date': '10-05-2026 16:35',
+    #     'airport': 'Departed from Entebbe International Airport [EBB]'.upper(),
     #     'is_error': False,
-    #     'status': 'TK 6259 - ETD 29-10-2024 04:05 AM | ETA 29-10-2024 11:20 AM at IST',
+    #     'status': 'A350 EK730 - ETD 10-05-2026 16:35 | ETA 10-05-2026 23:00 at IST',
     #     'color': 'green'
     # },
     # {
     #     'time': '11:20',
-    #     'date': '29-10-2024 11:20',
+    #     'date': '10-05-2026 11:20',
     #     'airport': 'Arrived at Istanbul Airport [IST]'.upper(),
     #     'is_error': False,
-    #     'status': 'TK 6259 - Arrived at IST',
+    #     'status': 'A350 EK730 - Arrived at IST',
     #     'color': 'green'
     # },
     # {
     #     'time': '21:45',
-    #     'date': '29-10-2024 21:45',
+    #     'date': '10-05-2026 21:45',
     #     'airport': 'Departed from Istanbul Airport [IST]'.upper(),
     #     'is_error': False,
-    #     'status': 'TK 0758 - ETD 29-10-2024 09:45 PM | ETA 30-10-2024 03:10 AM at DXB',
+    #     'status': 'A350 EK730 - ETD 10-05-2026 21:45 | ETA 10-05-2026 03:10 AM at DXB',
     #     'color': 'green'
     # },
     # {
