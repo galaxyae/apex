@@ -293,19 +293,19 @@ def uganda_new_mexico():
     return render_template('track.html', item="", ui="", shipment=product, has_arrived=has_arrived, has_arrived_message=has_arrived_message, sender=sender, has_shipped=has_shipped, shipping_message=shipping_message, product=transit, receiver=reciever, amount=len(transit), map = unique, lines = lines, source = locations[0]['country'].title(), checkpoints=checkpoints, checkpoints_length=len(checkpoints), increment=increment, progress=progress, error=error, flight_progress=flight_progress, arrival_time=arrival_time, shipment_error=shipment_error)
 
 
-def nairobi_ist_dxb():
+def uganda_kor():
     locations = [{
-            'country': 'Nairobi',
-            'code': 'KE',
-            'airport': 'NBO'
-        },{
-            'country': 'Istanbul',
-            'code': 'TR',
-            'airport': 'IST'
+            'country': 'Entebbe',
+            'code': 'UG',
+            'airport': 'EBB'
         },{
             'country': 'Dubai',
             'code': 'AE',
             'airport': 'DXB'
+        },{
+            'country': 'Seoul',
+            'code': 'KR',
+            'airport': 'ICN'
         }]
 
     map = []
@@ -342,29 +342,28 @@ def nairobi_ist_dxb():
             )
     print(lines)
     sender = {
-        'name':'APEX CAPITAL LOGISTICS',
+        'name':'MAPENDO MINING GROUP LIMITED',
         'address':"""
-                    P.O BOX 72177,
-                    KENYATTA AVENUE,
-                   NAIROBI, KENYA
+                    P.O.BOX 970319
+                    KAMPALA-UGANDA
                 """,
-        'contact':'info@apexcapitallogistics.com'
+        'contact':'N/A'
     }
 
 
     product = {
         'name':'Precious Minerals',
         'content':[
-            {'item': '1 Box(es) of GOLD AU BARS [07 KGs]'},
+            {'item': '1 Box(es) of GOLD AU BARS [01 KG]'},
         ]
     }
 
     transit = [
         {
-            'current': 'Nairobi, Jomo Kenyatta International Airport [NBO] - Istanbul Airport [IST] - Dubai International Airport [DXB]'.upper(),
-            'departure': 'Turkish Airlines, TK 6259 → Nairobi, Jomo Kenyatta International Airport [NBO] - Istanbul Airport [IST] 29-10-2024 04:05 [ Duration 7h15m ]',
-            'arrival': 'Turkish Airlines, TK 6259 → ETA Istanbul Airport [IST] 29-10-2024 11:20 AM',
-            'comment': 'Processed at departure'
+            'current':'Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB]'.upper(),
+            'departure':'Emirates, A350 EK730 → Entebbe, Entebbe International Airport [EBB] - Dubai, Dubai International Airport [DXB] 10-05-2026 16:35 [ Duration 5h25m ]',
+            'arrival':'Emirates, A350 EK730 → ETA Dubai, Dubai International Airport [DXB] 10-05-2026 23:00 PM',
+            'comment': 'Processed'
         },
         # {
         #     'current': 'Istanbul Airport [IST] - Dubai International Airport [DXB]'.upper(),
@@ -376,41 +375,39 @@ def nairobi_ist_dxb():
 
 
     reciever = {
-        'name':'AURA ROYAL BULLION TRADING LLC',
-        'address':"""ROOM NO. 415, 4TH FLOOR.
-HIND PLAZA 5 A, GOLD SOUK
-DUBAI, UAE
-+971 4385 8369
-arbbullion@gmail.com
-""".upper(),
-        'contact':'+971 4385 8369, arbbullion@gmail.com'
+        'name':'KYUNG SEONG SANG HOE Co.LIMITED',
+        'address':"""301 103 MISAGANGBYEONNAM-RO
+        HANAM-SI,GYEONGGI-RO,
+        REPUBLIC OF KOREA.
+        """.upper(),
+        'contact':'N/A'
     }
     # Harry Reid International Airport (LAS)
     flight_progress = [
-    #     {
-    #     'time': '--:--',
-    #     'date': '28-10-2024 --:--',
-    #     'airport': 'Booked: Awaiting Departure at Nairobi, Jomo Kenyatta International Airport [NBO]'.upper(),
+        {
+        'time': '--:--',
+        'date': '10-05-2026 --:--',
+        'airport': 'Booked: Awaiting Departure at Entebbe, Entebbe International Airport [EBB]'.upper(),
+        'is_error': False,
+        'status': 'A350 EK730 - Scheduled for Departure on 10-05-2026 at 16:35 | ETA 10-05-2026 23:00',
+        'color': 'orange'
+    },
+    #      {
+    #     'time': '04:05',
+    #     'date': '29-10-2024 04:05',
+    #     'airport': 'Departed from Nairobi, Jomo Kenyatta International Airport [NBO]'.upper(),
     #     'is_error': False,
-    #     'status': 'TK 6259 - Scheduled for Departure on 29-10-2024 at 04:05 AM',
-    #     'color': 'orange'
+    #     'status': 'TK 6259 - ETD 29-10-2024 04:05 AM | ETA 29-10-2024 11:20 AM at IST',
+    #     'color': 'green'
     # },
-         {
-        'time': '04:05',
-        'date': '29-10-2024 04:05',
-        'airport': 'Departed from Nairobi, Jomo Kenyatta International Airport [NBO]'.upper(),
-        'is_error': False,
-        'status': 'TK 6259 - ETD 29-10-2024 04:05 AM | ETA 29-10-2024 11:20 AM at IST',
-        'color': 'green'
-    },
-    {
-        'time': '11:20',
-        'date': '29-10-2024 11:20',
-        'airport': 'Arrived at Istanbul Airport [IST]'.upper(),
-        'is_error': False,
-        'status': 'TK 6259 - Arrived at IST',
-        'color': 'green'
-    },
+    # {
+    #     'time': '11:20',
+    #     'date': '29-10-2024 11:20',
+    #     'airport': 'Arrived at Istanbul Airport [IST]'.upper(),
+    #     'is_error': False,
+    #     'status': 'TK 6259 - Arrived at IST',
+    #     'color': 'green'
+    # },
     # {
     #     'time': '21:45',
     #     'date': '29-10-2024 21:45',
@@ -464,7 +461,7 @@ arbbullion@gmail.com
 
     shipment_error = False
 
-    arrival_time = "Estimated time of arrival → 30 OCTOBER 2024 [Turkish Airlines]"
+    arrival_time = "Estimated time of arrival → 11 MAY 2026 [Emirates Airlines]"
 
     # check
     increment = 100 / len(checkpoints)
@@ -559,10 +556,10 @@ def uganda_italy():
 
     reciever = {
         'name':'''CRESSALL RESISTORS LTD
-c/o SANLORENZO, SIMONE BRUCKNER''',
-        'address':"""TVIA LUIGI SALVATORI, 56/58
-55049 VIAREGGIO (LU), ITALIA
-ITALY""".upper(),
+        c/o SANLORENZO, SIMONE BRUCKNER''',
+                'address':"""TVIA LUIGI SALVATORI, 56/58
+        55049 VIAREGGIO (LU), ITALIA
+        ITALY""".upper(),
         'contact':'+39 0584 38096'
     }
 

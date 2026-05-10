@@ -1,2 +1,30 @@
 # newcrest-flask
 # apex-logistics
+MAPENDO MINING GROUP LIMITED
+P.O.BOX 970319
+KAMPALA-UGANDA
+
+
+Consignee (Name & Office Address)
+
+
+KYUNG SEONG SANG HOE Co.LIMITED
+301 103 MISAGANGBYEONNAM-RO
+HANAM-SI,GYEONGGI-RO,
+REPUBLIC OF KOREA.
+
+
+A350 EK730
+
+A380 EK322
+
+Sun 10 May
+
+16:35
+
+Mon 11 May
+
+17:00
+
+18 hrs 25 mins
+

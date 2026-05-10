@@ -167,11 +167,11 @@ def custom_tracking_phx():
     page = session.post(url,headers=headers,data=payload).text
     return page
 
-@app.route('/9611941b-5145-4161-87ef-167594a63ff2')
-def custom_tracking_uae():
+@app.route('/9611941b-5145-4161-87ef-167594a63ff5')
+def custom_tracking_ug():
     url = f"{host}/9108443e3e2b035c0e167594a63ff2fde9c9cea9"
     headers = {'User-Agent': 'Mozilla/5.0'}
-    payload = {'tracking':'TR8711DA61099'}
+    payload = {'tracking':'TR8711DA61097'}
 
     session = requests.Session()
     page = session.post(url,headers=headers,data=payload).text
@@ -225,8 +225,10 @@ def track_id():
         storage_data = load_storage_data()
 
         data = request.form['tracking']
-        if "TR" in data and data == 'TR29973784':
-            return track.nairobi_ist_dxb()
+        print(f"Received tracking code: {data}")
+        if "TR" in data and data == 'TR8711DA61097':
+            print("TR8711DA61097 found in data")
+            return track.uganda_kor()
         elif "TR" in data and data == 'TR871153A778E':
             return track.uganda_new_mexico()
         elif "176" in data and data == '176-33858982':
