@@ -391,16 +391,16 @@ def uganda_kor():
         'airport': 'Booked: Awaiting Departure at Entebbe, Entebbe International Airport [EBB]'.upper(),
         'is_error': False,
         'status': 'A350 EK730 - Scheduled for Departure on 10-05-2026 at 16:35 | ETA 10-05-2026 23:00',
-        'color': 'orange'
+        'color': 'green'
     },
-    #      {
-    #     'time': '16:35',
-    #     'date': '10-05-2026 16:35',
-    #     'airport': 'Departed from Entebbe International Airport [EBB]'.upper(),
-    #     'is_error': False,
-    #     'status': 'A350 EK730 - ETD 10-05-2026 16:35 | ETA 10-05-2026 23:00 at IST',
-    #     'color': 'green'
-    # },
+         {
+        'time': '16:35',
+        'date': '10-05-2026 16:35',
+        'airport': 'Departed from Entebbe International Airport [EBB]'.upper(),
+        'is_error': False,
+        'status': 'A350 EK730 - ETD 10-05-2026 16:35 | ETA 10-05-2026 23:00 at IST',
+        'color': 'green'
+    },
     # {
     #     'time': '11:20',
     #     'date': '10-05-2026 11:20',
