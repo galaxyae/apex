@@ -398,7 +398,7 @@ def uganda_kor():
         'date': '10-05-2026 16:35',
         'airport': 'Departed from Entebbe International Airport [EBB]'.upper(),
         'is_error': False,
-        'status': 'A350 EK730 - ETD 10-05-2026 16:35 | ETA 10-05-2026 23:00 at IST',
+        'status': 'A350 EK730 - ETD 10-05-2026 16:35 | ETA 10-05-2026 23:00 at DXB',
         'color': 'green'
     },
     # {
