@@ -375,7 +375,8 @@ def uganda_kor():
 
 
     reciever = {
-        'name':'KYUNG SEONG SANG HOE Co.LIMITED',
+        'name':'''MAPENDO MINING GROUP LIMITED
+        ℅ KYUNG SEONG SANG HOE Co.LIMITED''',
         'address':"""301 103 MISAGANGBYEONNAM-RO
         HANAM-SI,GYEONGGI-RO,
         REPUBLIC OF KOREA.
