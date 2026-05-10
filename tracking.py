@@ -386,8 +386,8 @@ def uganda_kor():
     # Harry Reid International Airport (LAS)
     flight_progress = [
         {
-        'time': '--:--',
-        'date': '10-05-2026 --:--',
+        'time': '15:30',
+        'date': '10-05-2026 15:30',
         'airport': 'Booked: Awaiting Departure at Entebbe, Entebbe International Airport [EBB]'.upper(),
         'is_error': False,
         'status': 'A350 EK730 - Scheduled for Departure on 10-05-2026 at 16:35 | ETA 10-05-2026 23:00',
