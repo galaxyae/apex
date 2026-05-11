@@ -401,14 +401,14 @@ def uganda_kor():
         'status': 'A350 EK730 - ETD 10-05-2026 16:35 | ETA 10-05-2026 23:00 at DXB',
         'color': 'green'
     },
-    # {
-    #     'time': '11:20',
-    #     'date': '10-05-2026 11:20',
-    #     'airport': 'Arrived at Istanbul Airport [IST]'.upper(),
-    #     'is_error': False,
-    #     'status': 'A350 EK730 - Arrived at IST',
-    #     'color': 'green'
-    # },
+    {
+        'time': '23:00',
+        'date': '10-05-2026 23:00',
+        'airport': 'Arrived at Dubai International Airport [DXB]'.upper(),
+        'is_error': False,
+        'status': 'A350 EK730 - Arrived at DXB on 10-05-2026 at 23:00 | Under Customs Clearance',
+        'color': 'green'
+    },
     # {
     #     'time': '21:45',
     #     'date': '10-05-2026 21:45',
