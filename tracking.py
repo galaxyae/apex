@@ -409,6 +409,14 @@ def uganda_kor():
         'status': 'A350 EK730 - Arrived at DXB on 10-05-2026 at 23:00 | Under Customs Clearance',
         'color': 'green'
     },
+    {
+        'time': '10:00',
+        'date': '11-05-2026 10:00',
+        'airport': 'Dubai International Airport [DXB]'.upper(),
+        'is_error': False,
+        'status': 'Customs Q',
+        'color': 'green'
+    },
     # {
     #     'time': '21:45',
     #     'date': '10-05-2026 21:45',
