@@ -414,8 +414,8 @@ def uganda_kor():
         'date': '11-05-2026 10:00',
         'airport': 'Dubai International Airport [DXB]'.upper(),
         'is_error': False,
-        'status': 'Customs Q',
-        'color': 'green'
+        'status': 'Customs Query on Documents',
+        'color': 'orange'
     },
     # {
     #     'time': '21:45',
@@ -470,7 +470,7 @@ def uganda_kor():
 
     shipment_error = False
 
-    arrival_time = "Estimated time of arrival → 11 MAY 2026 [Emirates Airlines]"
+    arrival_time = "Estimated time of arrival → TBA [Emirates Airlines]"
 
     # check
     increment = 100 / len(checkpoints)
