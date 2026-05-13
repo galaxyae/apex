@@ -417,6 +417,14 @@ def uganda_kor():
         'status': 'Customs Query on Documents',
         'color': 'orange'
     },
+    {
+        'time': '13:00',
+        'date': '13-05-2026 13:00',
+        'airport': 'Dubai International Airport [DXB]'.upper(),
+        'is_error': False,
+        'status': 'Customs Query Escalated',
+        'color': 'orange'
+    },
     # {
     #     'time': '21:45',
     #     'date': '10-05-2026 21:45',
