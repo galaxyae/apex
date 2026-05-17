@@ -425,6 +425,14 @@ def uganda_kor():
         'status': 'Customs Query Escalated',
         'color': 'orange'
     },
+    {
+        'time': '15:00',
+        'date': '17-05-2026 15:00',
+        'airport': 'Dubai International Airport [DXB]'.upper(),
+        'is_error': False,
+        'status': "The shipment can't transit with queried documents and hence has been referred back to origin.",
+        'color': 'orange'
+    },
     # {
     #     'time': '21:45',
     #     'date': '10-05-2026 21:45',
